@@ -25,12 +25,12 @@ body {
 
 h1 {
     font-size: 6rem !important;
-    font-weight: bold !important;
+    font-weight: 900 !important;
 }
 
 h2 {
     font-size: 5rem !important;
-    font-weight: bold !important
+    font-weight: 900 !important
 }
 
 hr {
