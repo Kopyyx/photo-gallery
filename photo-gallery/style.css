@@ -133,6 +133,8 @@ hr {
 @media screen and (max-width:768px) {
     .navTrigger {
         display: block;
+        background: none;
+        border: none;
     }
 
     .nav div.logo {
@@ -202,7 +204,7 @@ hr {
     border-radius: 2px;
     content: '';
     display: block;
-    width: 100%;
+    width: 3rem;
     height: 4px;
 }
 
@@ -395,28 +397,6 @@ hr {
     }
 }
 
-.affix {
-    padding: 0;
-    background-color: #111;
-}
-
-.myH2 {
-    text-align: center;
-    font-size: 4rem;
-}
-
-.myP {
-    text-align: justify;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 20px;
-}
-
-@media all and (max-width:700px) {
-    .myP {
-        padding: 2%;
-    }
-}
 
 /* login */
 
