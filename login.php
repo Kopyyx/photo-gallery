@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php echo ("chcát na petrovu mámu") ?>
+    <?php echo ("test") ?>
 </body>
 
 </html>
