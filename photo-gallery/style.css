@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
 html,
 body {
     margin: 0;
@@ -163,6 +165,7 @@ h2 {
         left: 0;
         bottom: 0;
         background-color: #111;
+        /*same background color of navbar*/
         background-position: center top;
     }
 
@@ -410,7 +413,7 @@ h2 {
 }
 
 
-/* Login */
+/* login */
 
 .modal-login {
     color: #636363;
@@ -505,7 +508,7 @@ h2 {
     outline: none;
 }
 
-/* Others */
+/* others */
 
 footer {
     background-color: #000;
