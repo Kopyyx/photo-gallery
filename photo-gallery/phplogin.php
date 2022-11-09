@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php echo ("test") ?>
+    test - logged in
 </body>
 
 </html>
