@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +15,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
-
 <body>
     <section class="home">
         <nav class="nav">
@@ -23,6 +22,7 @@
                 <div class="logo">
                     <a href="#">Logo</a>
                 </div>
+
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
                         <li><a class="link" href="index.html">Home</a></li>
@@ -39,6 +39,7 @@
                                         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" fill="white"></path>
                                     </svg>
                                 </a></li>
+
                             <li><a href="#myModal" data-toggle="modal">
                                     <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" fill="white"></path>
@@ -68,6 +69,7 @@
         </div>
     </section>
 
+
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
             <div class="modal-content">
@@ -86,10 +88,10 @@
                 <div class="modal-body">
                     <form method="post">
                         <div class="form-group">
-                            <input type="text" name="Username" placeholder="Username" required>
+                            <input class="form-control" type="text" name="Username" placeholder="Username" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="Password" placeholder="Password" required>
+                            <input class="form-control" type="password" name="Password" placeholder="Password" required>
                         </div>
                         <div class="form-group">
                             <button type="submit" name="Submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
@@ -127,22 +129,6 @@
 
 <?php
 
-if (empty($_POST['Submit'])) {
-    exit;
-}
-
-$logins = array('Alex' => '123456');
-
-$Username = $_POST['Username'];
-$Password = $_POST['Password'];
-
-if ($logins[$Username] == $Username && $logins[$Password] == $Password) {
-    /* Success: Set session variables and redirect to Protected page  */
-    $_SESSION['UserData']['Username'] = $logins[$Username];
-    header("location: photo-gallery/phplogin.php");
-    exit;
-} else {
-    $msg = "<span style='color:red'>Invalid Login Details</span>";
-}
+require("photo-gallery/login.php");
 
 ?>
