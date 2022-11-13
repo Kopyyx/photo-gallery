@@ -520,21 +520,11 @@ footer {
 .carousel { z-index: -99; } /* keeps this behind all content */
 .carousel .item {
     position: fixed;
-    width: 100%; height: 30%;
+    max-height: 30%;
 
 }
-.carousel .one {
-    background: url(photos/hockey5.jpg);
-    background-size: cover;
-    -moz-background-size: cover;
-}
-.carousel .two {
-    background: url(photos/hockey2.jpg);
-    background-size: cover;
-    -moz-background-size: cover;
-}
-.carousel .three {
-    background: url(photos/hockey4.jpg);
-    background-size: cover;
-    -moz-background-size: cover;
+
+.carousel-inner > .item > img {
+    min-width: 100%;
+    width: 100%;
 }

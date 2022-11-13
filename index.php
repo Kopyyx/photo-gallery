@@ -75,28 +75,21 @@
                     <img src="photo-gallery/photos/hockey5.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <div class="container d-flex h-100 flex-direction-column justify-content-center align-items-center">
-            <div class="row">
-                <div class="col-12 text-center" id="introduction">
-                    <h1>FOTOGALERIE</h1>
-                    <hr>
-                    <h2>MÍŠA HALÍKOVÁ</h2>
-                </div>
-            </div>
         </div>
 
     </section>
 
+    <header>
+    <div class="container d-flex h-100 flex-direction-column justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-12 text-center" id="introduction">
+                <h1>FOTOGALERIE</h1>
+                <hr>
+                <h2>MÍŠA HALÍKOVÁ</h2>
+            </div>
+        </div>
+    </div>
+    </header>
 
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
@@ -142,9 +135,7 @@
     </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="photo-gallery/javascript.js">$(document).ready(function() {
-        $('.carousel').carousel({interval: 7000});
-    });</script>
+<script src="photo-gallery/javascript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
