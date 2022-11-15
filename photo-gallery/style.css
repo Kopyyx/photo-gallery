@@ -105,6 +105,7 @@ hr {
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    z-index: 101;
 }
 
 .affix {
@@ -522,9 +523,8 @@ footer {
 /* slideshow */
 
 .carousel {
-    z-index: -99;
     background-color: #111111;
-
+    z-index: 99;
 }
 
 .carousel-item img {
@@ -538,13 +538,12 @@ footer {
 
 .overlay {
     position: absolute;
-    z-index: 12;
+    z-index: 100;
     top: 50%;
     left: 0;
     width: 100%;
     text-align: center;
 }
-
 
 
 

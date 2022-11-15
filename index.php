@@ -11,7 +11,6 @@ ob_start(); ?>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
               crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -70,49 +69,33 @@ ob_start(); ?>
                 </button>
             </div>
         </nav>
-        <!--  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="photo-gallery/photos/hockey1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="photo-gallery/photos/hockey3.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="photo-gallery/photos/hockey5.jpg" class="d-block w-100" alt="...">
-                  </div>
-              </div>
-          </div>-->
+
         <div class="overlay" id="introduction"><h1>FOTOGALERIE</h1>
             <h2>MÍŠA HALÍKOVÁ</h2></div>
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        class=""
+                        aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                        class=""></button>
             </div>
-
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="photo-gallery/photos/hockey1.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
                     <img src="photo-gallery/photos/hockey2.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
+                    <img src="photo-gallery/photos/hockey1.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
                     <img src="photo-gallery/photos/hockey3.jpg" class="d-block w-100">
+
                 </div>
             </div>
         </div>
-
     </section>
-
 
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
@@ -163,7 +146,6 @@ ob_start(); ?>
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="photo-gallery/javascript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
