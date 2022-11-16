@@ -446,14 +446,28 @@ h2 {
 
 .modal-login .form-control,
 .modal-login .btn {
-    min-height: 40px;
+    min-height: 50px;
     border-radius: 3px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+    font: normal 1em/1 Arial, sans-serif;
+    display: inline-block;
+}
+
+.ico-times:before {
+    content: "\2716";
 }
 
 .modal-login .close {
     position: absolute;
     top: -5px;
     right: -5px;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
 }
 
 .modal-login {
@@ -502,6 +516,8 @@ h2 {
     transition: all 0.4s;
     line-height: normal;
     border: none;
+    width: 8rem;
+
 }
 
 .modal-login .btn:hover,
