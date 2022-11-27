@@ -30,7 +30,7 @@ ob_start(); ?>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
                         <li><a class="link" href="index.php">Home</a></li>
-                        <li><a class="link" href="photo-gallery/portfolio.html">Portfolio</a></li>
+                        <li><a class="link" href="photo-gallery/gallery.html">Gallery</a></li>
                         <li><a class="link" href="photo-gallery/about.html">About</a></li>
                         <div class="social-icons">
                             <li class="ig"><a target="_blank" href="https://www.instagram.com/mh.shutterbug/">

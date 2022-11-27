@@ -563,27 +563,46 @@ footer {
 
 #photo {
     background: url("photos/hockey7.jpg");
-    height: 100vh;
     opacity: 0.5;
     background-position: center;
     background-size: cover;
     object-fit: cover;
-
+    height: 100vh;
 }
 
 .test3 {
-    width: 75%;
-    transition: transform .5s;
+    width: 90%;
+    /*transition: transform .5s;*/
 }
 
+/*
 .test3:hover {
-    transform: scale(1.5);
-}
+    transform: scale(1.4);
+}*/
 
 .kontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.test20 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 15rem;
+    font-size: 9rem;
+    color: white;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .test20 {
+        padding-top: 5rem;
+        font-size: 5rem;
+        padding-bottom: 0;
+    }
+}
+
 
 
