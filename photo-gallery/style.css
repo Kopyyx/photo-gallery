@@ -602,6 +602,34 @@ footer {
         font-size: 5rem;
         padding-bottom: 0;
     }
+    .text_about{
+        word-wrap: break-word;
+        width: 230px;
+    }
+}
+
+.text_about{
+    color: white;
+    font-size: 2rem;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+#email_input{
+    height: 3rem;
+    width: 50rem;
+    border-radius: 1rem;
+}
+#textarea{
+    height: 6rem;
+    width: 40rem;
+    border-radius: 1rem;
 }
 
 
