@@ -31,13 +31,22 @@ hr {
     width: 2.5rem;
 }
 
-.social-icons {
+.social-icons-nav {
     display: flex;
     justify-content: flex-end;
 }
 
-.ig {
-    width: 7rem !important;
+.social-icons-footer {
+    width: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .nav div.logo {
@@ -616,7 +625,7 @@ footer {
     text-align: center;
 }
 
-form{
+.email_form{
     width: 50%;
     text-align: center;
     color: white;
