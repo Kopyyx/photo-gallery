@@ -1,5 +1,12 @@
 <?php
-$link = "photo-gallery/phplogin.php";
+
+if ($_SERVER['REQUEST_URI'] == "/index.php"){
+    $link = "photo-gallery/phplogin.php";
+}
+else{
+    $link = "phplogin.php";
+}
+
 if (!isset($_POST['Submit'])) {
     exit;
 }

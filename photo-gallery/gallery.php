@@ -1,3 +1,5 @@
+<?php session_start();
+ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,7 @@
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
             crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- navbar -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> <!-- popup login -->
     <title>Document</title>
 </head>
 
@@ -49,6 +52,8 @@
 
 </section>
 
+
+
 <?php
 require_once ('footer.php');
 ?>
@@ -58,3 +63,9 @@ require_once ('footer.php');
 </body>
 
 </html>
+
+<?php
+
+require("login.php");
+
+?>

@@ -52,36 +52,7 @@ ob_start(); ?>
         </div>
     </section>
 
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog modal-login">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="avatar">
-                        <img src="photo-gallery/icons/user-icon.svg" alt="user-black-icon"/>
-                    </div>
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="ico-times"
-                                                                                                   role="img" aria-label="Cancel"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="Username" placeholder="Username" required>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" type="password" name="Password" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" name="Submit" class="btn btn-primary btn-lg btn-block login-btn">
-                                Login
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <?php
     require_once ('photo-gallery/footer.php');
