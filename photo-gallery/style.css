@@ -575,16 +575,7 @@ footer {
     text-align: center;
 }
 
-#photo {
-    background: url("photos/hockey7.jpg");
-    opacity: 0.5;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
-    height: 100vh;
-}
-
-.test3 {
+.gallery_photo {
     width: 90%;
     /*transition: transform .5s;*/
 }
@@ -594,13 +585,7 @@ footer {
     transform: scale(1.4);
 }*/
 
-.kontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.test20 {
+.page_title {
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -611,7 +596,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .test20 {
+    .gallery_title {
         padding-top: 5rem;
         font-size: 5rem;
         padding-bottom: 0;

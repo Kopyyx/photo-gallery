@@ -1,10 +1,10 @@
 <?php require_once('components/head.php'); ?>
     <section class="home">
         <?php require_once('components/nav.php'); ?>
-        <div class="container kontainer h-100 d-flex align-items-center">
+        <div class="container h-100 d-flex align-items-center justify-content-center flex-column">
             <div class="row d-flex justify-content-center">
                 <div class="col-10 col-sm-12 col-md-4 text-center py-2">
-                    <h3 class="test20">About</h3>
+                    <h3 class="page_title">About</h3>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
