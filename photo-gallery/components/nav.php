@@ -1,15 +1,15 @@
 <nav class="nav">
     <div class="container-fluid">
         <div class="logo">
-            <a href="../index.php">Logo</a>
+            <a href="../../index.php">Logo</a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a class="link" href="../index.php">Home</a></li>
+                <li><a class="link" href="../../index.php">Home</a></li>
                 <li><a class="link" href="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/gallery.php" : "gallery.php" ?>">Gallery</a></li>
                 <li><a class="link" href="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/about.php" : "about.php" ?>">About</a></li>
                 <div class="social-icons-nav">
-                    <li><a href="#">
+                    <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
                             <img src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg" ?>" alt="instagram-white-logo"/>
                         </a></li>
                     <li><a href="#">

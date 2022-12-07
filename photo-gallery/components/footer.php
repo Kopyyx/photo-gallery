@@ -4,3 +4,9 @@
         <img class="social-icons-footer" src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg" ?>" alt="facebook-white-logo"/>
     </div>
 </footer>
+
+<script src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/javascript.js" : "javascript.js" ?>"></script>
+
+</body>
+
+</html>
