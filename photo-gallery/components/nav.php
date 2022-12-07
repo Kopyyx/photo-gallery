@@ -1,3 +1,14 @@
+<?php
+$gallery_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/gallery.php" : "gallery.php";
+$about_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/about.php" : "about.php";
+
+$instagram_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg";
+$facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg";
+$user_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/user-icon.svg" : "icons/user-icon.svg";
+
+$login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/login-icon.svg" : "icons/login-icon.svg";
+?>
+
 <nav class="nav">
     <div class="container-fluid">
         <div class="logo">
@@ -6,17 +17,17 @@
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a class="link" href="../../index.php">Home</a></li>
-                <li><a class="link" href="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/gallery.php" : "gallery.php" ?>">Gallery</a></li>
-                <li><a class="link" href="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/about.php" : "about.php" ?>">About</a></li>
+                <li><a class="link" href="<?php echo $gallery_path  ?>">Gallery</a></li>
+                <li><a class="link" href="<?php echo $about_path ?>">About</a></li>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
-                            <img src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg" ?>" alt="instagram-white-logo"/>
+                            <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>
                         </a></li>
                     <li><a href="#">
-                            <img src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg" ?>" alt="facebook-white-logo"/>
+                            <img src="<?php echo $facebook_icon_path ?>" alt="facebook-white-logo"/>
                         </a></li>
                     <li><a href="#myModal" data-toggle="modal">
-                            <img class="login-icon" src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/login-icon.svg" : "icons/login-icon.svg" ?>" alt="login-white-logo"/>
+                            <img class="login-icon" src="<?php echo $login_path ?> alt="login-white-logo"/>
                         </a></li>
                 </div>
 
@@ -35,7 +46,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="avatar">
-                    <img src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/user-icon.svg" : "icons/user-icon.svg" ?>" alt="user-black-icon"/>
+                    <img src="<?php echo $user_icon_path ?>" alt="user-black-icon"/>
                 </div>
                 <h4 class="modal-title">Login</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="ico-times"

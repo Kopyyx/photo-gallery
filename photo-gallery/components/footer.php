@@ -1,11 +1,17 @@
+<?php
+$path =($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/javascript.js" : "javascript.js" ;
+$instagram_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg";
+$facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg";
+?>
+
 <footer class="text-center">
     <div class="footer-icons">
-        <img class="social-icons-footer" src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg" ?>" alt="instagram-white-logo"/>
-        <img class="social-icons-footer" src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg" ?>" alt="facebook-white-logo"/>
+        <img class="social-icons-footer" src="<?php echo $instagram_icon_path  ?>" alt="instagram-white-logo"/>
+        <img class="social-icons-footer" src="<?php echo $facebook_icon_path  ?>" alt="facebook-white-logo"/>
     </div>
 </footer>
 
-<script src="<?php echo ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/javascript.js" : "javascript.js" ?>"></script>
+<script src="<?php echo $path?>"></script>
 
 </body>
 

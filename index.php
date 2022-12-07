@@ -23,7 +23,6 @@
                 </div>
                 <div class="carousel-item">
                     <img src="photo-gallery/photos/hockey3.jpg" class="d-block w-100">
-
                 </div>
             </div>
         </div>
