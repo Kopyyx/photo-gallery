@@ -539,17 +539,6 @@ h2 {
     background: #45aba6 !important;
     outline: none;
 }
-
-/* others */
-
-footer {
-    background-color: #000;
-}
-
-.admin {
-    background-color: #292929 !important;
-}
-
 /* slideshow */
 
 .carousel {
@@ -585,6 +574,10 @@ footer {
     transform: scale(1.4);
 }*/
 
+.gallery{
+    background: black;
+}
+
 .page_title {
     display: flex;
     justify-content: center;
@@ -593,6 +586,25 @@ footer {
     font-size: 9rem;
     color: white;
     font-weight: 900;
+}
+
+.gallery_title{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 9rem;
+    color: white;
+    font-weight: 900;
+}
+
+.text_about{
+    color: white;
+    font-size: 2rem;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -605,14 +617,7 @@ footer {
         word-wrap: break-word;
         width: 230px;
     }
-}
 
-.text_about{
-    color: white;
-    font-size: 2rem;
-    word-wrap: break-word;
-    width: 100%;
-    text-align: center;
 }
 
 .email_form{
@@ -631,5 +636,72 @@ footer {
     border-radius: 1rem;
 }
 
+/* photo gallery */
 
+.gallery_container {
+    padding: 40px 5%;
+}
 
+.heading-text {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.heading-text span {
+    font-weight: 100;
+}
+
+ul {
+    list-style: none;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+    padding-left: 0;
+}
+
+.image-gallery > li {
+    flex: auto;
+    height: 300px;
+    cursor: pointer;
+    transition: transform .25s ease-in-out;
+}
+
+.image-gallery::after {
+    content: "";
+    flex-grow: 999;
+}
+
+.image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+    filter: grayscale(.7);
+    transition: transform .5s ease-in-out;
+}
+
+/* hover */
+.image-gallery li:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.image-gallery img:hover {
+    filter: grayscale(0);
+}
+@media (max-width:768px) {
+    .image-gallery li img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        filter: grayscale(0);
+        /*transition: transform .5s ease-in-out;*/
+    }
+    .image-gallery li:hover {
+        transform: scale(1);
+    }
+}

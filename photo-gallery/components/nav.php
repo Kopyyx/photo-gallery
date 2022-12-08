@@ -17,7 +17,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a class="link" href="../../index.php">Home</a></li>
-                <li><a class="link" href="<?php echo $gallery_path  ?>">Gallery</a></li>
+                <li><a class="link" href="<?php echo $gallery_path ?>">Gallery</a></li>
                 <li><a class="link" href="<?php echo $about_path ?>">About</a></li>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
@@ -27,7 +27,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
                             <img src="<?php echo $facebook_icon_path ?>" alt="facebook-white-logo"/>
                         </a></li>
                     <li><a href="#myModal" data-toggle="modal">
-                            <img class="login-icon" src="<?php echo $login_path ?> alt="login-white-logo"/>
+                            <img class="login-icon" src="<?php echo $login_path ?>" alt="login-white-logo"/>
                         </a></li>
                 </div>
 

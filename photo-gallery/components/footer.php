@@ -6,7 +6,7 @@ $facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery
 
 <footer class="text-center">
     <div class="footer-icons">
-        <img class="social-icons-footer" src="<?php echo $instagram_icon_path  ?>" alt="instagram-white-logo"/>
+        <a href="https://www.instagram.com/mh.shutterbug" target="_blank"><img class="social-icons-footer" src="<?php echo $instagram_icon_path  ?>" alt="instagram-white-logo"/></a>
         <img class="social-icons-footer" src="<?php echo $facebook_icon_path  ?>" alt="facebook-white-logo"/>
     </div>
 </footer>

@@ -28,4 +28,4 @@
         </div>
     </section>
 <?php require_once('photo-gallery/components/footer.php'); ?>
-<?php require("photo-gallery/login.php"); ?>
+<?php require_once("photo-gallery/login.php"); ?>

@@ -40,4 +40,4 @@
     </section>
 <?php require_once('components/footer.php'); ?>
 
-<?php require("login.php"); ?>
+<?php require_once("login.php"); ?>
