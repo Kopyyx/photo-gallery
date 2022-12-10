@@ -44,13 +44,12 @@ hr {
 
 .social-icons-footer {
     width: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
 }
 
 .footer-icons{
     display: flex;
     justify-content: center;
+    gap: 5rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
@@ -102,6 +101,7 @@ hr {
 
 .nav div.main_list ul li a:hover {
     color: #000000;
+    cursor: pointer;
 }
 
 

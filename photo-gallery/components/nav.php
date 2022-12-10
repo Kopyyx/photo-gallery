@@ -1,6 +1,4 @@
 <?php
-$gallery_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/gallery.php" : "gallery.php";
-$about_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/about.php" : "about.php";
 
 $instagram_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg";
 $facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg";
@@ -15,10 +13,10 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
             <a href="../../index.php">Logo</a>
         </div>
         <div id="mainListDiv" class="main_list">
-            <ul class="navlinks">
-                <li><a class="link" href="../../index.php">Home</a></li>
-                <li><a class="link" href="<?php echo $gallery_path ?>">Gallery</a></li>
-                <li><a class="link" href="<?php echo $about_path ?>">About</a></li>
+            <ul>
+                <li><a id="link-home" data-page="index.php">Home</a></li>
+                <li><a id="link-gallery" data-page="photo-gallery/gallery.php">Gallery</a></li>
+                <li><a id="link-about" data-page="photo-gallery/about.php"">About</a></li>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
                             <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>
@@ -71,3 +69,20 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
         </div>
     </div>
 </div>
+
+<script>
+    const linkHome = document.getElementById("link-home");
+    const linkGallery = document.getElementById("link-gallery");
+    const linkAbout = document.getElementById("link-about");
+
+    linkHome.addEventListener("click", redirect);
+    linkGallery.addEventListener("click", redirect);
+    linkAbout.addEventListener("click", redirect);
+
+    function redirect() {
+        const baseUrl = "http:/localhost:8000/";
+        let page = this.getAttribute("data-page");
+        window.history.pushState({}, document.title, "/");
+        window.location.href = page;
+    }
+</script>
