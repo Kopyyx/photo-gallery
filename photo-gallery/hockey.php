@@ -2,7 +2,7 @@
 <section class="gallery">
     <?php require_once('components/nav.php'); ?>
     <div class="gallery_container">
-        <h4 class="gallery_title">Hockey</h4>
+        <h4 class="gallery_title">Hokej</h4>
         <ul class="image-gallery">
             <li>
                 <img src="photos/hockey3.jpg" alt="hockey-photo" loading="lazy"/>

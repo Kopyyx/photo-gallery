@@ -16,9 +16,9 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a class="link" href="../../index.php">Home</a></li>
-                <li><a class="link" href="<?php echo $gallery_path ?>">Gallery</a></li>
-                <li><a class="link" href="<?php echo $about_path ?>">About</a></li>
+                <li><a class="link" href="../../index.php">Domů</a></li>
+                <li><a class="link" href="<?php echo $gallery_path ?>">Galerie</a></li>
+                <li><a class="link" href="<?php echo $about_path ?>">O mně</a></li>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
                             <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>
@@ -48,7 +48,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
                 <div class="avatar">
                     <img src="<?php echo $user_icon_path ?>" alt="user-black-icon"/>
                 </div>
-                <h4 class="modal-title">Login</h4>
+                <h4 class="modal-title">Příhlášení</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="ico-times"
                                                                                                role="img" aria-label="Cancel"></i>
                 </button>
@@ -63,7 +63,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
                     </div>
                     <div class="form-group">
                         <button type="submit" name="Submit" class="btn btn-primary btn-lg btn-block login-btn">
-                            Login
+                            Příhlásit se
                         </button>
                     </div>
                 </form>
