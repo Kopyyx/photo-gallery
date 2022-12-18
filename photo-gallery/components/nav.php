@@ -14,9 +14,9 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a class="link" href="../../index.php">Home</a></li>
-                <li><a class="link" href="<?php echo $gallery_path ?>">Gallery</a></li>
-                <li><a class="link" href="<?php echo $about_path ?>">About</a></li>
+                <li><a class="link" id="link-home" data-page="index.php">Domů</a></li>
+                <li><a class="link"  id="link-gallery" data-page="photo-gallery/gallery.php">Galerie</a></li>
+                <li><a class="link"  id="link-about" data-page="photo-gallery/about.php">O mně</a></li>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
                             <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>

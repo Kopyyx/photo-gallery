@@ -8,15 +8,18 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col-7 text-center">
+                <div class="col-12 col-md-12 col-xl-8 text-center">
                     <p class="text_about">
-                        fvbdufibvgdfhiovdolsbvfsdjgfvbdsjkgfbsljglfsdigvbdfhjylbgfdhilgbfdsuilgsdfilgbdasfljkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbdkjfbvjkdflbvk</p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. In laoreet, magna id viverra tincidunt, sem odilor. Nam quis nulla.
+                    </p>
                     <br>
                     <p class="text_about">
-                        fvbdufibvgdfhiovdolsbvfsdjgfvbdsjkgfbsljglfsdigvbdfhjylbgfdhilgbfdsuilgsdfilgbdasfljkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbdkjfbvjkdflbvk</p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum
+                    </p>
                     <br>
                     <p class="text_about">
-                        fvbdufibvgdfhiovdolsbvfsdjgfvbdsjkgfbsljglfsdigvbdfhjylbgfdhilgbfdsuilgsdfilgbdasfljkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbdkjfbvjkdflbvk</p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
 
                 </div>
 

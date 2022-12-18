@@ -581,7 +581,7 @@ h2 {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    padding-bottom: 15rem;
+    padding-bottom: 8rem;
     font-size: 9rem;
     color: white;
     font-weight: 900;
@@ -606,19 +606,6 @@ h2 {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .gallery_title {
-        padding-top: 5rem;
-        font-size: 5rem;
-        padding-bottom: 0;
-    }
-    .text_about{
-        word-wrap: break-word;
-        width: 230px;
-    }
-
-}
-
 .email_form{
     width: 50%;
     text-align: center;
@@ -633,6 +620,52 @@ h2 {
     height: 6rem;
     width: 40rem;
     border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    .gallery_title {
+        padding-top: 5rem;
+        font-size: 5rem;
+        padding-bottom: 3rem;
+    }
+    .text_about{
+        word-wrap: break-word;
+        width: 230px;
+    }
+
+    .page_title {
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        font-size: 5rem;
+    }
+
+    .email_form{
+        width: 25%;
+    }
+    #email_input{
+        height: 3rem;
+        width: 30rem;
+        border-radius: 1rem;
+    }
+    #textarea{
+        height: 6rem;
+        width: 20rem;
+        border-radius: 1rem;
+    }
+
+}
+@media (max-width: 389px){
+    .gallery_title {
+        padding-top: 20rem;
+        font-size: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .page_title {
+        padding-top: 25rem;
+        padding-bottom: 2rem;
+        font-size: 5rem;
+    }
 }
 
 /* photo gallery */
