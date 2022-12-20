@@ -5,7 +5,7 @@
         <div class="container h-100 d-flex justify-content-center flex-column">
             <div class="row d-flex justify-content-center">
                 <div class="col-10 col-sm-12 col-md-4 text-center py-4">
-                    <h4 class="gallery_title">GALLERY</h4>
+                    <h3 class="gallery_title">GALERIE</h3>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">

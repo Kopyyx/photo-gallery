@@ -100,8 +100,53 @@ hr {
 }
 
 .nav div.main_list ul li a:hover {
-    color: #000000;
+    color: grey;
     cursor: pointer;
+}
+
+ul {
+    margin: 150px auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+}
+li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+@media screen and (max-height: 300px) {
+    ul {
+        margin-top: 40px;
+    }
 }
 
 
@@ -606,21 +651,61 @@ h2 {
     text-align: center;
 }
 
+.contant_section{
+    height: 100vh;
+    width: 100%;
+}
+
 .email_form{
     width: 50%;
     text-align: center;
     color: white;
 }
 #email_input{
-    height: 3rem;
+    height: 3.5rem;
     width: 50rem;
-    border-radius: 1rem;
+    font-size: medium;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    outline: none;
 }
 #textarea{
-    height: 6rem;
-    width: 40rem;
-    border-radius: 1rem;
+    height: 8rem;
+    width: 45rem;
+    border-radius: .5rem;
+    font-size: medium;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 3px;
+    color: white;
+    outline:0 !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
 }
+
+.submit_button{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: cornflowerblue;
+    border-radius: .5rem;
+    color: white;
+}
+
+.contact_heading{
+    font-size: 7rem !important;
+}
+
+.contact_label{
+    font-size: 1.5rem;
+}
+
 
 @media (max-width: 768px) {
     .gallery_title {
@@ -645,12 +730,13 @@ h2 {
     #email_input{
         height: 3rem;
         width: 30rem;
-        border-radius: 1rem;
     }
     #textarea{
         height: 6rem;
         width: 20rem;
-        border-radius: 1rem;
+    }
+    .contant_heading {
+        font-size:4rem !important;
     }
 
 }
