@@ -554,13 +554,44 @@ h2 {
 
 }
 
-.overlay {
+.overlay_home {
     position: absolute;
     z-index: 100;
     top: 50%;
     left: 0;
     width: 100%;
     text-align: center;
+}
+
+.overlay_about{
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+.overlay_gallery{
+    position: absolute;
+    z-index: 100;
+    top: 23%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+.overlay_gallery_heading{
+    position: absolute;
+    z-index: 100;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
 }
 
 .gallery_photo {
@@ -573,6 +604,13 @@ h2 {
     transform: scale(1.4);
 }*/
 
+.background{
+    background-image: url("https://wallpaperaccess.com/full/539662.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .gallery{
     background: black;
 }
@@ -581,7 +619,6 @@ h2 {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    padding-bottom: 8rem;
     font-size: 9rem;
     color: white;
     font-weight: 900;
@@ -603,10 +640,12 @@ h2 {
     font-size: 2rem;
     word-wrap: break-word;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.contant_section{
+.contact_section{
     height: 100vh;
     width: 100%;
 }
@@ -673,12 +712,6 @@ h2 {
         width: 230px;
     }
 
-    .page_title {
-        padding-top: 8rem;
-        padding-bottom: 2rem;
-        font-size: 5rem;
-    }
-
     .email_form{
         width: 25%;
     }
@@ -692,6 +725,13 @@ h2 {
     }
     .contant_heading {
         font-size:4rem !important;
+    }
+
+    .overlay_about{
+        font-size: 2rem;
+    }
+    .page_title{
+
     }
 
 }

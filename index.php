@@ -1,8 +1,7 @@
 <?php require_once('photo-gallery/components/head.php'); ?>
     <section class="home">
         <?php require_once('photo-gallery/components/nav.php'); ?>
-
-        <div class="overlay" id="introduction"><h1>FOTOGALERIE</h1>
+        <div class="overlay_home" id="introduction"><h1>FOTOGALERIE</h1>
             <h2>MICHAELA HALÍKOVÁ</h2></div>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators">
