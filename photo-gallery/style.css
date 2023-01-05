@@ -576,7 +576,7 @@ h2 {
 .overlay_gallery{
     position: absolute;
     z-index: 100;
-    top: 23%;
+    top: 40%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -753,6 +753,7 @@ h2 {
 
 .gallery_container {
     padding: 40px 5%;
+    background: #24292f;
 }
 
 .heading-text {
