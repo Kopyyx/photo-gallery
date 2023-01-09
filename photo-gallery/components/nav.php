@@ -52,7 +52,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <form action="../photo-gallery/login.php" method="post" name="form">
                     <div class="form-group">
                         <input class="form-control" type="text" name="Username" placeholder="Username" required>
                     </div>
@@ -60,7 +60,7 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
                         <input class="form-control" type="password" name="Password" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="Submit" class="btn btn-primary btn-lg btn-block login-btn">
+                        <button type="submit" name="login_button" class="btn btn-primary btn-lg btn-block login-btn">
                             Příhlásit se
                         </button>
                     </div>
