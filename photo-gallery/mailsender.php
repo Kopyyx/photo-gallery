@@ -1,6 +1,4 @@
 <?php
-
-require ("components/head.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -50,10 +48,10 @@ function myMail()
         $mail->Subject = $subject;
         $mail->Body = $text . '<br>' . $email;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-        $mail->Send();
-            echo '<script type="text/javascript">
-       window.onload = function () { alert("Message has been sent"); window.location.href = "http://localhost:8000/photo-gallery/about.php";} </script>';
-
+        $mail->send();
+        echo '<script type="text/javascript">
+       window.onload = function () { alert("Message has been sent"); 
+           window.location.href = "http://localhost:8000/photo-gallery/about.php";} </script>';
 
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

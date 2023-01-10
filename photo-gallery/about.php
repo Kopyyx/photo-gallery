@@ -37,6 +37,7 @@
             </div>
         </div>
     </div>
+
 </section>
 <section class="contact_section">
     <div class="container h-100 w-100 d-flex flex-column justify-content-center align-items-center">
@@ -45,15 +46,15 @@
         <form action="mailsender.php" method="post" class="email_form">
                     <label for="email_input" class="form-label contact_label">Emailová adresa</label>
                     <input type="email" class="form-control shadow-none" id="email_input"
-                           name="email" required>
+                           name="email" maxlength="70" required>
 
                     <label for="subject" class="form-label contact_label py-4">Předmět</label>
                     <input type="text" class="form-control shadow-none"
-                           name="subject" id="subject" required>
+                           name="subject" id="subject" maxlength="60" required>
                     <label for="textarea" class="form-label contact_label py-4">Zpráva</label>
 
                     <textarea id="textarea" name="text" maxlength="1000" required></textarea>
-                    <button type="submit" name="email_button" class="submit_button" onclick="form_redirect()">Odeslat</button>
+                    <button type="submit" name="email_button" class="submit_button">Odeslat</button>
         </form>
     </div>
 </section>
