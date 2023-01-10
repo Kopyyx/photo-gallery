@@ -33,15 +33,15 @@
             <div class="row d-flex justify-content-center overlay_gallery">
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4">
                     <a href="hockey.php"><img class="gallery_photo" src="photos/hockey3.jpg"></a>
-                    <h2 class="overlay2">Hokej</h2>
+                    <h4 class="overlay2">Hokej</h4>
                 </div>
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
                     <a href="couple.php"><img class="gallery_photo" src="photos/couple3.jpg"></a>
-                    <h2 class="overlay2">Párové fotografie</h2>
+                    <h4 class="overlay2">Párové fotografie</h4>
                 </div>
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
                     <a href="#"><img class="gallery_photo" src="photos/hockey6.jpg"></a>
-                    <h2 class="overlay2">Hokej</h2>
+                    <h4 class="overlay2">Hokej</h4>
                 </div>
             </div>
 

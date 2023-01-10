@@ -37,39 +37,25 @@
             </div>
         </div>
     </div>
-    </div>
 </section>
 <section class="contact_section">
-    <div class="container d-flex justify-content-center align-items-center flex-column">
-            <h2 class="contact_heading">Kontaktuj mě</h2>
+    <div class="container h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="contact_title">Kontaktuj mě</h3>
 
         <form action="mailsender.php" method="post" class="email_form">
-
-            <div class="row d-flex flex-column">
-                <div class="col-6">
                     <label for="email_input" class="form-label contact_label">Emailová adresa</label>
                     <input type="email" class="form-control shadow-none" id="email_input"
                            name="email" required>
 
-                </div>
-                <div class="col-6">
                     <label for="subject" class="form-label contact_label py-4">Předmět</label>
                     <input type="text" class="form-control shadow-none"
                            name="subject" id="subject" required>
                     <label for="textarea" class="form-label contact_label py-4">Zpráva</label>
-                </div>
-            </div>
-
-            <div class="row d-flex flex-column">
-                <div class="col-6">
 
                     <textarea id="textarea" name="text" maxlength="1000" required></textarea>
-                </div>
-                <div class="col-6">
                     <button type="submit" name="email_button" class="submit_button">Odeslat</button>
-                </div>
-            </div>
         </form>
+    </div>
 </section>
 <?php require_once('components/footer.php'); ?>
 
