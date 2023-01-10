@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 $path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/style.css" : "style.css";
 ?>
 <!DOCTYPE html>

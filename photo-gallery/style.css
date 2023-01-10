@@ -46,6 +46,22 @@ footer{
     background-color: black;
 }
 
+.footer_name{
+    color: white;
+    font-size: 2rem;
+}
+
+.footer_author{
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer_line{
+    color: white;
+    font-size: 2rem;
+}
+
 .social-icons-footer {
     width: 2rem;
 }
@@ -53,9 +69,15 @@ footer{
 .footer-icons{
     display: flex;
     justify-content: center;
-    gap: 5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.footer-icons img {
+    margin-top: .4rem;
 }
 
 .nav div.logo {

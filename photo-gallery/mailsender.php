@@ -1,5 +1,6 @@
 <?php
-ob_start();
+
+require ("components/head.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -47,17 +48,17 @@ function myMail()
 //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = $subject;
-        $mail->Body = $text;
+        $mail->Body = $text . '<br>' . $email;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->Send();
+            echo '<script type="text/javascript">
+       window.onload = function () { alert("Message has been sent"); window.location.href = "http://localhost:8000/photo-gallery/about.php";} </script>';
 
-        $mail->send();
-        echo '<script type="text/javascript">
-       window.onload = function () { alert("Message has been sent"); } </script>';
-        header("Location: about.php", true, 303);
-        exit();
+
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
     //return file_put_contents("mail.html", $recipient . "<br><br>" . $text);
 }
+
 myMail();

@@ -53,7 +53,7 @@
                     <label for="textarea" class="form-label contact_label py-4">Zpráva</label>
 
                     <textarea id="textarea" name="text" maxlength="1000" required></textarea>
-                    <button type="submit" name="email_button" class="submit_button">Odeslat</button>
+                    <button type="submit" name="email_button" class="submit_button" onclick="form_redirect()">Odeslat</button>
         </form>
     </div>
 </section>
