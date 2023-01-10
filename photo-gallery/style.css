@@ -151,7 +151,7 @@ footer{
 
 .affix {
     padding: 0;
-    background-color: #111;
+    background-color: #111111;
 }
 
 
@@ -674,6 +674,10 @@ h2 {
 .contact_section{
     height: 100vh;
     width: 100%;
+    background-image: url("photos/her/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
 }
 
 .email_form{
@@ -691,7 +695,7 @@ h2 {
     height: 3.5rem;
     width: 50rem;
     font-size: medium;
-    background-color: rgba(31, 35, 40, 0.22);
+    background-color: rgba(108, 113, 128, 0.1);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -703,7 +707,7 @@ h2 {
     height: 3.5rem;
     width: 30rem;
     font-size: medium;
-    background-color: rgba(31, 35, 40, 0.22);
+    background-color: rgba(108, 113, 128, 0.1);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -715,7 +719,7 @@ h2 {
     width: 45rem;
     border-radius: .8rem;
     font-size: medium;
-    background-color: rgba(31, 35, 40, 0.22);
+    background-color: rgba(108, 113, 128, 0.1);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -793,6 +797,12 @@ h2 {
     .contact_title{
         font-size: 5rem;
         padding-bottom: 10rem;
+    }
+    .contact_section{
+        background-image: url("photos/her/img6_dark.JPG");
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
     }
 
 }

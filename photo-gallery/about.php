@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-label="Slide 1"></button>
@@ -27,10 +27,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="photos/hockey7.jpg" class="d-block w-100">
+                <img src="photos/her/img1.JPG" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="photos/hockey6.jpg" class="d-block w-100">
+                <img src="photos/her/img2.JPEG" class="d-block w-100">
             </div>
             <div class="carousel-item">
                 <img src="photos/hockey1.jpg" class="d-block w-100">
