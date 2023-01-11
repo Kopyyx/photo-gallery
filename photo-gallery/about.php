@@ -37,40 +37,34 @@
             </div>
         </div>
     </div>
-<!--
-    <div class="scroll-to-next">
-        <a href="#contact_section">
-            <img src="icons/arrow-down.svg" alt="arrow-down-icon">
-        </a>
-    </div>-->
     <div class="scroll-to-next">
         <a href="#contact_section">
             <Div class="arrow1"></Div>
             <Div class="arrow2"></Div>
         </a>
-
     </div>
-
 
 </section>
 <section id="contact_section" class="contact_section">
     <div class="container h-100 w-100 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="contact_title">Kontaktuj mě</h3>
+        <h3 class="contact_title">KONTAKTUJ MĚ</h3>
 
         <form action="mailsender.php" method="post" class="email_form">
-                    <label for="email_input" class="form-label contact_label">Emailová adresa</label>
-                    <input type="email" class="form-control shadow-none" id="email_input"
-                           name="email" maxlength="70" required>
+            <label for="email_input" class="form-label contact_label">Emailová adresa</label>
+            <input type="email" class="form-control shadow-none" id="email_input"
+                   name="email" maxlength="70" required>
 
-                    <label for="subject" class="form-label contact_label py-4">Předmět</label>
-                    <input type="text" class="form-control shadow-none"
-                           name="subject" id="subject" maxlength="60" required>
-                    <label for="textarea" class="form-label contact_label py-4">Zpráva</label>
+            <label for="subject" class="form-label contact_label py-4">Předmět</label>
+            <input type="text" class="form-control shadow-none"
+                   name="subject" id="subject" maxlength="60" required>
+            <label for="textarea" class="form-label contact_label py-4">Zpráva</label>
 
-                    <textarea id="textarea" name="text" maxlength="1000" required></textarea>
-                    <button type="submit" name="email_button" class="submit_button">Odeslat</button>
+            <textarea id="textarea" name="text" maxlength="1000" required></textarea>
+            <div class="wrap">
+                <button class="submit_button" type="submit" name="email_button">Odeslat</button>
+            </div>
         </form>
-    </div>
+        </div>
 </section>
 <?php require_once('components/footer.php'); ?>
 

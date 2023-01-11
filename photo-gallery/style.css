@@ -6,7 +6,7 @@ body {
     font-size: 10px;
     max-height: 100vh;
     max-width: 100vw;
-    background: #24292f;
+    background-color: #24292f !important;
 }
 
 /* Navbar section */
@@ -126,7 +126,7 @@ footer{
 }
 
 .nav div.main_list ul li a:hover {
-    color: dodgerblue;
+    color: #55b2da;
     cursor: pointer;
 }
 
@@ -640,10 +640,6 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.gallery{
-    background: black;
-}
-
 .page_title {
     text-decoration: none;
     font-size: 9rem;
@@ -653,8 +649,6 @@ h2 {
 
 .gallery_title{
     text-decoration: none;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     font-size: 9rem;
     color: white;
     font-weight: 900;
@@ -690,6 +684,7 @@ h2 {
     align-items: center;
     gap: 1.5rem;
 }
+
 #email_input{
     height: 3.5rem;
     width: 50rem;
@@ -716,8 +711,8 @@ h2 {
     text-align: center;
 }
 #textarea{
-    height: 8rem;
-    width: 45rem;
+    height: 30rem;
+    width: 50rem;
     border-radius: .8rem;
     font-size: medium;
     background-color: rgba(108, 113, 128, 0.1);
@@ -730,30 +725,20 @@ h2 {
     -webkit-appearance:none;
     box-shadow: none !important;
     padding-bottom: 2rem;
-}
-
-.submit_button{
-    width: 8rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    background-color: cornflowerblue;
-    border-radius: .5rem;
-    color: white;
+    resize: none;
 }
 
 .contact_title{
     text-decoration: none;
-    font-size: 9rem;
+    font-size: 8rem;
     color: white;
     font-weight: 900;
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
 }
 
 .contact_label{
     font-size: 1.5rem;
 }
-
 
 @media (max-width: 768px) {
     .gallery_title {
@@ -774,7 +759,7 @@ h2 {
         width: 30rem;
     }
     #textarea{
-        height: 6rem;
+        height: 20rem;
         width: 25rem;
     }
 
@@ -796,8 +781,8 @@ h2 {
         font-size: 2rem;
     }
     .contact_title{
-        font-size: 5rem;
-        padding-bottom: 10rem;
+        font-size: 4rem;
+        padding-bottom: 3rem;
     }
     .contact_section{
         background-image: url("photos/her/img6_dark.JPG");
@@ -809,7 +794,7 @@ h2 {
 }
 @media (max-width: 389px){
     .gallery_title {
-        padding-top: 20rem;
+        padding-top: 5rem;
         font-size: 5rem;
         padding-bottom: 3rem;
     }
@@ -818,6 +803,9 @@ h2 {
     }
     .page_title{
         font-size: 5rem;
+    }
+    #textarea{
+        height: 10rem;
     }
 }
 
@@ -880,27 +868,53 @@ ul {
     filter: grayscale(0);
 }
 
-.arrow1{
+.arrow1 {
     width: 4rem;
     height: 4rem;
-    background-color: transparent; z-index: 101;
-    bottom: 35px;
-    position: absolute;
-    border-width: 0 0.3em 0.3em 0;
-    border-style: solid;
-    border-color: antiquewhite;
-    animation: scrolldown 1.2s ease-in-out infinite 0.15s;}
-
-.arrow2{
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent; z-index: 101;
+    background-color: transparent;
+    z-index: 100;
     bottom: 50px;
     position: absolute;
     border-width: 0 0.3em 0.3em 0;
     border-style: solid;
     border-color: antiquewhite;
+    animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+
+}
+
+.arrow2{
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    z-index: 100;
+    bottom: 65px;
+    position: absolute;
+    border-width: 0 0.3em 0.3em 0;
+    border-style: solid;
+    border-color: antiquewhite;
     animation: scrolldown 1.2s ease-in-out infinite}
+
+.opening-bg-hockey{
+    background-image: url("photos/hockey3_dark.jpg");
+    background-position: 50% 32%;
+    background-size: cover;
+    object-fit: cover;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opening-bg-couple{
+    background-image: url("photos/couple1_dark.jpg");
+    background-position: 50% 10%;
+    background-size: cover;
+    object-fit: cover;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width:768px) {
     .image-gallery li img {
@@ -920,6 +934,9 @@ ul {
     .arrow2{
         width: 3rem;
         height: 3rem;
+    }
+    .opening-bg{
+        height: 38rem;
     }
 }
 
@@ -942,4 +959,34 @@ ul {
     display: flex;
     justify-content: center;
 
+}
+.wrap {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit_button {
+    width: 140px;
+    height: 45px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit_button:hover {
+    background-color: #55b2da;
+    box-shadow: 0px 15px 20px rgba(46, 131, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }

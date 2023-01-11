@@ -17,7 +17,8 @@ function myMail()
     $mail->CharSet = "UTF-8";
 
     $email = $_POST["email"];
-    $text = $_POST["text"];
+    $text = trim($_POST['text']);
+    $text = nl2br($text);
     $subject = $_POST["subject"];
 
     try {
@@ -33,7 +34,7 @@ function myMail()
 
 //Recipients
         $mail->setFrom('photogallery.halikova@gmail.com');
-        $mail->addAddress($email);     //Add a recipient
+        $mail->addAddress("kopeckyjan.JK@gmail.com");     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -46,18 +47,18 @@ function myMail()
 //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = $subject;
-        $mail->Body = $text . '<br>' . $email;
+        $mail->Body = $text . '<br>' . "Můj email je:" . '<br>' .  $email;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         $mail->send();
-            echo '<script type="text/javascript">
-       window.onload = function () { alert("Message has been sent"); 
+        echo '<script type="text/javascript">
+       window.onload = function () { alert("Zpráva byla úspěšně odeslána!"); 
            window.location.href = "http://localhost:8000/photo-gallery/about.php";} </script>';
 
     } catch (Exception $e) {
-        /*echo '<script type="text/javascript">
-            window.onload = function () { alert("Chyba! Email se nemohl odeslat"); 
-            window.location.href = "http://localhost:8000/photo-gallery/about.php";}</script>';*/
+        echo '<script type="text/javascript">
+            window.onload = function () { alert("Chyba! Email se nemohl odeslat");}</script>';
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
     }
     //return file_put_contents("mail.html", $recipient . "<br><br>" . $text);
 }

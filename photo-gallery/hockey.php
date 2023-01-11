@@ -1,8 +1,11 @@
 <?php require_once('components/head.php'); ?>
+<?php require_once('components/nav.php'); ?>
+<section class="opening-bg-hockey" >
+        <h4 class="gallery_title text-center">HOKEJ</h4>
+</section>
+
 <section class="gallery">
-    <?php require_once('components/nav.php'); ?>
     <div class="gallery_container">
-        <h4 class="gallery_title text-center">Hokej</h4>
         <ul class="image-gallery">
             <li>
                 <img src="photos/hockey1.jpg" alt="hockey-photo" loading="lazy"/>

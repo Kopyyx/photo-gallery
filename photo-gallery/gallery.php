@@ -27,7 +27,7 @@
         <div class="container d-flex justify-content-center">
             <div class="row d-flex justify-content-center">
                 <div class="overlay_gallery_heading py-4">
-                    <h3 class="page_title">Galerie</h3>
+                    <h3 class="page_title">GALERIE</h3>
                 </div>
             </div>
             <div class="row d-flex justify-content-center overlay_gallery">

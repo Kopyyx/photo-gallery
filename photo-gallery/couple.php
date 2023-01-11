@@ -1,8 +1,11 @@
 <?php require_once('components/head.php'); ?>
+<?php require_once('components/nav.php'); ?>
+<section class="opening-bg-couple" >
+    <h4 class="gallery_title text-center">PÁROVÉ FOTOGRAFIE</h4>
+</section>
 <section class="gallery">
-    <?php require_once('components/nav.php'); ?>
+
     <div class="gallery_container">
-        <h4 class="gallery_title text-center">Párové fotografie</h4>
         <ul class="image-gallery">
             <li>
                 <img src="photos/couple6.jpg" alt="couple-photo" loading="lazy"/>
