@@ -879,7 +879,30 @@ ul {
 .image-gallery img:hover {
     filter: grayscale(0);
 }
-@media (max-width:768px) {
+
+.arrow1{
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent; z-index: 101;
+    bottom: 35px;
+    position: absolute;
+    border-width: 0 0.3em 0.3em 0;
+    border-style: solid;
+    border-color: antiquewhite;
+    animation: scrolldown 1.2s ease-in-out infinite 0.15s;}
+
+.arrow2{
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent; z-index: 101;
+    bottom: 50px;
+    position: absolute;
+    border-width: 0 0.3em 0.3em 0;
+    border-style: solid;
+    border-color: antiquewhite;
+    animation: scrolldown 1.2s ease-in-out infinite}
+
+@media screen and (max-width:768px) {
     .image-gallery li img {
         width: 100%;
         height: 100%;
@@ -890,4 +913,33 @@ ul {
     .image-gallery li:hover {
         transform: scale(1);
     }
+    .arrow1{
+        width: 3rem;
+        height: 3rem;
+    }
+    .arrow2{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@keyframes scrolldown {
+    0%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+    }
+    50%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+    }
+}
+
+.scroll-to-next{
+    display: flex;
+    justify-content: center;
+
 }

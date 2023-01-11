@@ -16,7 +16,7 @@
     </div>
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
-        <div class="carousel-indicators">
+        <!--<div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
@@ -24,22 +24,36 @@
                     aria-current="true"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
                     class=""></button>
-        </div>
+        </div>-->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="photos/her/img1.JPG" class="d-block w-100">
+                <img src="photos/her/img2.JPEG" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="photos/her/img2.JPEG" class="d-block w-100">
+                <img src="photos/her/img1.JPG" class="d-block w-100">
             </div>
             <div class="carousel-item">
                 <img src="photos/hockey1.jpg" class="d-block w-100">
             </div>
         </div>
     </div>
+<!--
+    <div class="scroll-to-next">
+        <a href="#contact_section">
+            <img src="icons/arrow-down.svg" alt="arrow-down-icon">
+        </a>
+    </div>-->
+    <div class="scroll-to-next">
+        <a href="#contact_section">
+            <Div class="arrow1"></Div>
+            <Div class="arrow2"></Div>
+        </a>
+
+    </div>
+
 
 </section>
-<section class="contact_section">
+<section id="contact_section" class="contact_section">
     <div class="container h-100 w-100 d-flex flex-column justify-content-center align-items-center">
             <h3 class="contact_title">Kontaktuj mě</h3>
 
