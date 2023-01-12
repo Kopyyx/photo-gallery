@@ -935,8 +935,11 @@ ul {
         width: 3rem;
         height: 3rem;
     }
-    .opening-bg{
-        height: 38rem;
+    .opening-bg-hockey{
+        height: 25rem;
+    }
+    .opening-bg-couple{
+        height: 25rem;
     }
 }
 
