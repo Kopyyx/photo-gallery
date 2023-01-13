@@ -50,7 +50,7 @@
         <h3 class="contact_title">KONTAKTUJ MĚ</h3>
 
         <form action="mailsender.php" method="post" class="email_form">
-            <label for="email_input" class="form-label contact_label">Emailová adresa</label>
+            <label for="email_input" class="form-label contact_label">Vaše emailová adresa</label>
             <input type="email" class="form-control shadow-none" id="email_input"
                    name="email" maxlength="70" required>
 

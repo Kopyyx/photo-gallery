@@ -625,6 +625,7 @@ h2 {
 
 .gallery_photo {
     width: 90%;
+    border: solid .5rem antiquewhite;
     /*transition: transform .5s;*/
 }
 
