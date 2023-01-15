@@ -14,13 +14,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="photos/hockey2.jpg" class="d-block w-100">
+                    <img src="photos/group4.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
                     <img src="photos/hockey4.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="photos/hockey3.jpg" class="d-block w-100">
+                    <img src="photos/couple1.jpg" class="d-block w-100">
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
                     <h4 class="overlay2">Párové fotografie</h4>
                 </div>
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
-                    <a href="#"><img class="gallery_photo" src="photos/hockey6.jpg"></a>
-                    <h4 class="overlay2">Hokej</h4>
+                    <a href="group.php"><img class="gallery_photo" src="photos/group2.jpg"></a>
+                    <h4 class="overlay2">Skupinové fotografie</h4>
                 </div>
             </div>
 

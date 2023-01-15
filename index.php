@@ -18,10 +18,10 @@
                     <img src="photo-gallery/photos/hockey2.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="photo-gallery/photos/hockey4.jpg" class="d-block w-100">
+                    <img src="photo-gallery/photos/couple4.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="photo-gallery/photos/hockey3.jpg" class="d-block w-100">
+                    <img src="photo-gallery/photos/group4.jpg" class="d-block w-100">
                 </div>
             </div>
         </div>

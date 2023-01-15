@@ -596,6 +596,7 @@ h2 {
     text-align: center;
     color: white;
     font-size: 2.5rem;
+    gap: 4rem;
 }
 .overlay_gallery{
     position: absolute;
@@ -625,7 +626,7 @@ h2 {
 
 .gallery_photo {
     width: 90%;
-    border: solid .5rem antiquewhite;
+    border: solid .4rem antiquewhite;
     /*transition: transform .5s;*/
 }
 
@@ -657,12 +658,13 @@ h2 {
 
 .text_about{
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     word-wrap: break-word;
-    width: 100%;
+    width: 100rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .contact_section{
@@ -712,7 +714,7 @@ h2 {
     text-align: center;
 }
 #textarea{
-    height: 30rem;
+    height: 20rem;
     width: 50rem;
     border-radius: .8rem;
     font-size: medium;
@@ -750,6 +752,8 @@ h2 {
     .text_about{
         word-wrap: break-word;
         width: 230px;
+        gap: 0;
+        font-size: 2rem;
     }
 
     .email_form{
@@ -760,7 +764,7 @@ h2 {
         width: 30rem;
     }
     #textarea{
-        height: 20rem;
+        height: 30rem;
         width: 25rem;
     }
 
@@ -808,6 +812,22 @@ h2 {
     #textarea{
         height: 10rem;
     }
+}
+
+@media screen and (max-height: 601px) {
+
+    #textarea{
+        height: 10rem;
+        width: 35rem;
+    }
+    #email_input{
+        width: 30rem;
+    }
+
+    #subject{
+        width: 25rem;
+    }
+
 }
 
 /* photo gallery */
@@ -909,6 +929,17 @@ ul {
 .opening-bg-couple{
     background-image: url("photos/couple1_dark.jpg");
     background-position: 50% 10%;
+    background-size: cover;
+    object-fit: cover;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opening-bg-group{
+    background-image: url("photos/group1_dark.jpg");
+    background-position: 50% 5%;
     background-size: cover;
     object-fit: cover;
     height: 45rem;

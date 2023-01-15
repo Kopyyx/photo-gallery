@@ -1,16 +1,15 @@
 <?php require_once('components/head.php'); ?>
 <section class="home">
     <?php require_once('components/nav.php'); ?>
-    <div class="overlay_about">
+    <div class="overlay_about d-flex flex-column align-items-center">
         <h3 class="page_title">O MNĚ</h3>
-        <div>
+        <div class="text_about">
             <p class="py-4">
-                Jsem Míša, mladá fotografka s vášní pro kreativní tvorbu. Ráda fotím.
+                Říkají mi Mika, je mi 19 let a vedle tance a cestování je mou velkou vášní právě focení.
             </p>
             <br>
-            <br>
             <p>
-                Pokud máte zájem o moje fotografické služby, neváhejte mě kontaktovat. Ráda bych vám to pomohla vyfotit.
+                Pokud máte zájem o moje fotografické služby, neváhejte mě kontaktovat. Ráda vám vaše momenty pomůžu zachytit.
             </p>
         </div>
     </div>
@@ -31,10 +30,10 @@
             </div>
             <div class="carousel-item">
                 <img src="photos/her/img1.JPG" class="d-block w-100">
-            </div>
+            </div><!--
             <div class="carousel-item">
                 <img src="photos/hockey1.jpg" class="d-block w-100">
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="scroll-to-next">
