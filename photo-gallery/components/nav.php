@@ -53,10 +53,10 @@ $login_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/l
             <div class="modal-body">
                 <form action="../photo-gallery/login.php" method="post" name="form">
                     <div class="form-group">
-                        <input class="form-control" type="text" name="Username" placeholder="Username" required>
+                        <input class="form-control" type="text" name="username" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="password" name="Password" placeholder="Password" required>
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" name="login_button" class="btn btn-primary btn-lg btn-block login-btn">
