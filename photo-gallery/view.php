@@ -1,5 +1,4 @@
 <?php
-// Include the database configuration file
 require_once 'dbConfig.php';
 
 // Get image data from database
