@@ -1,17 +1,5 @@
 <?php
-    $servername = "localhost";
-    $db_name = "login";
-    $db_username = "root";
-    $db_password = "";
-
-    $conn = new mysqli($servername, $db_username, $db_password, $db_name);
-
-// Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    //echo "Connected successfully";
-
+require "dbConfig.php";
     function data_encrypt($data)
     {
         $output = false;
@@ -23,7 +11,6 @@
         // hash
         $key = hash('sha256', $secret_key);
 
-        // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
         $iv = substr(hash('sha256', $secret_iv), 0, 16);
 
         $output = openssl_encrypt($data, $encrypt_method, $key, 0, $iv);
@@ -59,7 +46,7 @@
     $decryptedPassword = data_decrypt($user_password);
 
 if ($_POST["username"] == $user_username && $_POST["password"] == $decryptedPassword){
-    echo "logged in";
+    header("Location: administration.php");
 }else{
     echo "nope";
 }
