@@ -14,12 +14,3 @@ $(window).scroll(function () {
         $('.nav').removeClass('affix');
     }
 });
-
-function hide_content() {
-    var x = document.getElementById("introduction");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}

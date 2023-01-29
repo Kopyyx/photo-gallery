@@ -660,7 +660,6 @@ h2 {
     color: white;
     font-size: 2.5rem;
     word-wrap: break-word;
-    width: 100rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -774,6 +773,7 @@ h2 {
 
     .overlay_about{
         font-size: 2rem;
+        top:10%;
     }
 
     .overlay_gallery{
@@ -794,6 +794,9 @@ h2 {
         background-position: center;
         background-size: cover;
         object-fit: cover;
+    }
+    .scroll-to-next{
+        padding-right: 3rem;
     }
 
 }

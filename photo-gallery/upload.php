@@ -22,6 +22,9 @@ function compressImage($source, $destination, $quality) {
             $image = imagecreatefromjpeg($source);
     }
 
+    // Save image
+    imagejpeg($image, $destination, $quality);
+
     // Return compressed image
     return $destination;
 }
@@ -30,8 +33,7 @@ function convert_filesize($bytes, $decimals = 2) {
     $factor = floor((strlen($bytes) - 1) / 3);
     return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$size[$factor];
 }
-// File upload path
-$uploadPath = "E:\Projects\photo-gallery\photo-gallery\photos";
+$uploadPath = "uploads/";
 
 $statusMsg = '';
 $status = 'danger';
@@ -58,6 +60,7 @@ if(isset($_POST["submit"])){
             if($compressedImage){
                 $compressedImageSize = filesize($compressedImage);
                 $compressedImageSize = convert_filesize($compressedImageSize);
+                $insert = $conn->query("INSERT into images (id, image) VALUES ('".$compressedImage."', NOW())");
 
                 $status = 'success';
                 $statusMsg = "Image compressed successfully.";
@@ -71,52 +74,14 @@ if(isset($_POST["submit"])){
         $statusMsg = 'Please select an image file to upload.';
     }
 }
- echo $statusMsg;
+echo $statusMsg; ?>
 
-$insert = $conn->query("INSERT into images (image, created) VALUES ('$compressedImage', NOW())");
-/*
-if($insert){
-    $status = 'success';
-    $statusMsg = "File uploaded successfully.";
-}
-else
-{
-    $statusMsg = "File upload failed, please try again.";
-}
-else
-{
-    $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
-}
-else{
-    $statusMsg = 'Please select an image file to upload.';
-}*/
+<?php if(!empty($compressedImage)){ ?>
+    <p><b>Original Image Size:</b> <?php echo $imageSize; ?></p>
+    <p><b>Compressed Image Size:</b> <?php echo $compressedImageSize; ?></p>
+    <img src="<?php echo $compressedImage; ?>"/>
+<?php } ?>
+<?php
+$statusMsg = '';
 
-/*
-$status = $statusMsg = '';
-if(isset($_POST["submit"])){
-$status = 'error';
-if(!empty($_FILES["image"]["name"])) {
-$fileName = basename($_FILES["image"]["name"]);
-$fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-
-
-$allowTypes = array('jpg','png','jpeg','gif');
-if(in_array($fileType, $allowTypes)){
-$image = $_FILES['image']['tmp_name'];
-$imgContent = addslashes(file_get_contents($image));
-
-$insert = $conn->query("INSERT into images (image, created) VALUES ('$compressedImage', NOW())");
-
-if($insert){
-$status = 'success';
-$statusMsg = "File uploaded successfully.";
-}else{
-$statusMsg = "File upload failed, please try again.";
-}
-}else{
-$statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
-}
-}else{
-$statusMsg = 'Please select an image file to upload.';
-}
-}*/
+require_once "components/footer.php";
