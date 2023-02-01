@@ -623,11 +623,19 @@ h2 {
     font-size: 4rem;
     font-weight: 700;
 }
+.admin_overlay{
+    font-size: 3rem;
+    font-weight: 700;
+}
 
 .gallery_photo {
     width: 90%;
     border: solid .4rem antiquewhite;
     /*transition: transform .5s;*/
+}
+.admin_category{
+    width: 50%;
+    border: solid .2rem antiquewhite;
 }
 
 /*
@@ -648,7 +656,12 @@ h2 {
     color: white;
     font-weight: 900;
 }
-
+.admin_title{
+    text-decoration: none;
+    font-size: 9rem;
+    color: white;
+    font-weight: 900;
+}
 .gallery_title{
     text-decoration: none;
     font-size: 9rem;
@@ -669,7 +682,7 @@ h2 {
 .contact_section{
     height: 100vh;
     width: 100%;
-    background-image: url("photos/her/bg.jpg");
+    background-image: url("photos/she/bg.jpg");
     background-position: center;
     background-size: cover;
     object-fit: cover;
@@ -785,18 +798,27 @@ h2 {
     .overlay2{
         font-size: 2rem;
     }
+    .admin_overlay{
+        font-size: 2rem;
+    }
+    .admin_category{
+        width: 60%;
+    }
     .contact_title{
         font-size: 4rem;
         padding-bottom: 3rem;
     }
     .contact_section{
-        background-image: url("photos/her/img6_dark.JPG");
+        background-image: url("photos/she/img6_dark.JPG");
         background-position: center;
         background-size: cover;
         object-fit: cover;
     }
     .scroll-to-next{
         padding-right: 3rem;
+    }
+    .admin_title{
+        font-size: 3rem;
     }
 
 }
@@ -814,6 +836,12 @@ h2 {
     }
     #textarea{
         height: 10rem;
+    }
+    .admin_title{
+        font-size: 4rem;
+    }
+    .admin_category{
+        width: 80%;
     }
 }
 
@@ -854,10 +882,7 @@ ul {
 }
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 65px;
-    padding-left: 0;
+    gap: 60px;
 }
 
 .image-gallery > li {
@@ -962,6 +987,9 @@ ul {
     .image-gallery li:hover {
         transform: scale(1);
     }
+    .image-gallery{
+        flex-direction: column;
+    }
     .arrow1{
         width: 3rem;
         height: 3rem;
@@ -1027,4 +1055,27 @@ ul {
     box-shadow: 0px 15px 20px rgba(46, 131, 229, 0.4);
     color: #fff;
     transform: translateY(-7px);
+}
+
+.admin_add_button{
+    border-radius: 50% !important;
+    width: 8rem;
+    height: 8rem;
+    font-size: 4rem !important;
+    font-weight: 700;
+    background-color: #55b2da;
+    color: white;
+    border: none;
+}
+.close_button{
+    font-size: 2rem;
+}
+#upload_image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.modal-title{
+    color: black;
+    text-decoration: none;
 }

@@ -26,10 +26,10 @@
         </div>-->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="photos/her/img2.JPEG" class="d-block w-100">
+                <img src="photos/she/img2.JPEG" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="photos/her/img1.JPG" class="d-block w-100">
+                <img src="photos/she/img1.JPG" class="d-block w-100">
             </div><!--
             <div class="carousel-item">
                 <img src="photos/hockey1.jpg" class="d-block w-100">
