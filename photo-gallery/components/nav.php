@@ -8,23 +8,16 @@ $logout_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/
 
 $logout = ($_SERVER["REQUEST_URI"] == "/index.php") ? 'window.location = \'photo-gallery/logout.php\';' : 'window.location = \'logout.php\';';
 
+$change = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/change.php" : "change.php";
+
 session_start();
 
 if (!isset($_SESSION["loggedIn"])) {
     $_SESSION["loggedIn"] = false;
 }
-
-$form_tag = "<form action='../logout.php'>";
-$form_tag_end = "</form>";
-
-$a_tag = "<a href='#myModal' data-toggle='modal>";
-$a_tag_end = "</a>";
-
-
-//$modal = $_SESSION["loggedIn"] ? "" : "'";
-$tag_start = $_SESSION["loggedIn"] ? $form_tag : $a_tag;
-$tag_end = $_SESSION["loggedIn"] ? $form_tag_end : $a_tag_end;
+$password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_password'>Změna hesla</a></li>";
 ?>
+
 
 <nav class="nav">
     <div class="container-fluid">
@@ -36,8 +29,9 @@ $tag_end = $_SESSION["loggedIn"] ? $form_tag_end : $a_tag_end;
                 <li><a id="link-home" data-page="index.php">Domů</a></li>
                 <li><a id="link-gallery" data-page="photo-gallery/gallery.php">Galerie</a></li>
                 <li><a id="link-about" data-page="photo-gallery/about.php">O mně</a></li>
+                <?php if ($_SESSION["loggedIn"]){echo $password_change;} ?>
                 <div class="social-icons-nav">
-                    <li><a href="https://www.instagram.com/mh.shutterbug/" target="_blank">
+                    <li><a href="https://www.instagram.com/mh.shutterbug/?theme=dark" target="_blank">
                             <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>
                         </a></li>
                     <li><a href="#">
@@ -99,7 +93,7 @@ $tag_end = $_SESSION["loggedIn"] ? $form_tag_end : $a_tag_end;
     </div>
 </div>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade" id="image_upload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -123,6 +117,32 @@ $tag_end = $_SESSION["loggedIn"] ? $form_tag_end : $a_tag_end;
                 </button>
                 <button type="submit" name="submit" class="btn btn-success btn-lg">Nahrát</button>
             </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="change_password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-1 modal_title w-100" id="staticBackdropLabel">Změna hesla</h1>
+                <button type="button" class="btn-close close_button" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <form action=<?php echo $change;?> method="post" enctype="multipart/form-data">
+                <div class="modal-body d-flex align-items-center flex-column">
+                    <div class="password_change_text">Staré heslo</div>
+                    <input class="password_change" type="password" maxlength="20" name="old_password"><!--<img src="icons/eye-close.png" alt="eye-closed">-->
+                    <div class="password_change_text">Nové heslo</div>
+                    <input class="password_change" type="password" maxlength="20" name="new_password"><!--<img src="../icons/eye-close.png" alt="eye-closed">-->
+                    <div class="password_change_text">Potvrzení nového hesla</div>
+                    <input class="password_change" type="password" maxlength="20" name="comfirm"><!--<img src="../icons/eye-close.png" alt="eye-closed">-->
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="submit" class="btn btn-success btn-lg">Uložit</button>
+                </div>
             </form>
         </div>
     </div>

@@ -13,4 +13,3 @@ window.addEventListener('scroll', function() {
         document.querySelector('.nav').classList.remove('affix');
     }
 });
-

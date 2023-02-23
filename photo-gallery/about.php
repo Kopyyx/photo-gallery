@@ -1,6 +1,6 @@
 <?php require_once('components/head.php'); ?>
+<?php require_once('components/nav.php'); ?>
 <section class="home">
-    <?php require_once('components/nav.php'); ?>
     <div class="overlay_about d-flex flex-column align-items-center">
         <h3 class="page_title">O MNĚ</h3>
         <div class="text_about">
@@ -66,5 +66,3 @@
         </div>
 </section>
 <?php require_once('components/footer.php'); ?>
-
-

@@ -1,7 +1,6 @@
-<?php require_once("components/head.php"); ?>
-
+<?php require_once("components/head.php");
+    require_once('components/nav.php'); ?>
     <section class="home">
-        <?php require_once('components/nav.php'); ?>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"

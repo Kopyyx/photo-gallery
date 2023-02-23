@@ -1,7 +1,7 @@
 <?php require_once('components/head.php');
 require_once('components/nav.php');
 
-$button = " <button type='button' class='btn btn-primary admin_add_button' data-bs-toggle='modal' data-bs-target='#staticBackdrop'>+</button>";
+$button = " <button type='button' class='btn btn-primary admin_add_button' data-bs-toggle='modal' data-bs-target='#image_upload'>+</button>";
 ?>
 <section class="opening-bg-couple" >
     <h4 class="gallery_title text-center">PÁROVÉ FOTOGRAFIE</h4>

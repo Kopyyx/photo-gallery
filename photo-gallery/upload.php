@@ -1,7 +1,6 @@
 <?php
 // Include the database configuration file
 require_once 'dbConfig.php';
-
 function compressImage($source, $destination, $quality) {
     // Get image info
     $imgInfo = getimagesize($source);
@@ -76,7 +75,6 @@ if(isset($_POST["submit"])) {
                 $insert = $conn->query("INSERT INTO ".$tb." (id, image) VALUES ('".$compressedImage."', NOW())");
                 $statusMsg = "Komprese a nahrání proběhlo úspěšně.";
                 echo "<script> window.location.replace('$url');alert('$statusMsg')</script>";
-
             } else {
                 $statusMsg = "Chyba :((";
                 echo "<script> window.location.replace('$url');alert('$statusMsg')</script>";
