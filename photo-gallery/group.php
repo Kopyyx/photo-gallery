@@ -21,7 +21,19 @@ $button = "<button type='button' class='btn btn-primary admin_add_button' data-b
             // Cyklus pro zobrazení jednotlivých fotografií
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<li><img src='photos/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/></li>";
+                    echo "<li><form method='post' action='delete.php'>
+                    <input type='hidden' name='name' value='" . $row['name'] . "'>
+                    <div class='overlay_container'>
+                        <img src='uploads/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/>
+                        <div class='overlay d-flex justify-content-center align-items-center'>
+                            <a href='delete.php'>
+                                <input type='image' class='trash' src='icons/trash.svg'>
+                            </a>
+                        </div>
+                    </div>
+                    </form>
+                    </li>
+                    ";
                 }
             }
             if ($_SESSION["loggedIn"]) echo $button;

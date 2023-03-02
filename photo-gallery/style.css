@@ -903,17 +903,18 @@ ul {
     height: 100%;
     vertical-align: middle;
     border-radius: 5px;
-    filter: grayscale(.7);
     transition: transform .5s ease-in-out;
 }
 
 /* hover */
-.image-gallery li:hover {
+.list:hover {
     transform: scale(1.2);
     z-index: 1;
 }
-
-.image-gallery img:hover {
+.image{
+    filter: grayscale(.7);
+}
+.image:hover {
     filter: grayscale(0);
 }
 
@@ -1092,4 +1093,51 @@ ul {
     font-size: 1.5rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
+}
+
+.delete {
+    position: absolute;
+    top: 50rem;
+    left: 20rem;
+    font-size: 1.5rem;
+    color: antiquewhite;
+    border: 0;
+    background-color: tomato;
+}
+.overlay_container {
+    position: relative;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: black;
+    cursor: default;
+
+}
+
+.overlay_container:hover .overlay {
+    opacity: .8;
+    z-index: 200;
+}
+.trash{
+    width: 60px !important;
+    height: 70px !important;
+    cursor: pointer;
 }
