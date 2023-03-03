@@ -8,7 +8,7 @@ $sql = "SELECT * FROM hockey_photos ORDER BY id ASC";
 $result = mysqli_query($conn, $sql);
 
 if (!isset($_SESSION["loggedIn"])) {
-    $_SESSION["loggedIn"] = false;
+$_SESSION["loggedIn"] = false;
 }
 
 $button = "<button type='button' class='btn btn-primary admin_add_button' data-bs-toggle='modal' data-bs-target='#image_upload'>+</button>";
@@ -25,7 +25,8 @@ $button = "<button type='button' class='btn btn-primary admin_add_button' data-b
             // Cyklus pro zobrazení jednotlivých fotografií
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<li><form method='post' action='delete.php'>
+                        if ($_SESSION["loggedIn"]){
+                          echo "  <li><form method='post' action='delete.php'>
                     <input type='hidden' name='name' value='" . $row['name'] . "'>
                     <div class='overlay_container'>
                         <img src='uploads/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/>
@@ -36,8 +37,10 @@ $button = "<button type='button' class='btn btn-primary admin_add_button' data-b
                         </div>
                     </div>
                     </form>
-                    </li>
-                    ";
+                    </li>";
+                        }else{
+                            echo "<li class='list'><img class='image' src='photos/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/></li>";
+                        }
                 }
             }
             if ($_SESSION["loggedIn"]) echo $button;
