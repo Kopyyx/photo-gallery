@@ -11,7 +11,7 @@ if (!isset($_SESSION["loggedIn"])) {
     $_SESSION["loggedIn"] = false;
 }
 
-$button = "<button type='button' class='btn btn-primary admin_add_button' data-bs-toggle='modal' data-bs-target='#image_upload'>+</button>";
+$button = "<img src='icons/add-button.svg' class='admin_add_button' data-bs-toggle='modal' data-bs-target='#image_upload'>";
 ?>
 
     <section class="opening-bg-couple">

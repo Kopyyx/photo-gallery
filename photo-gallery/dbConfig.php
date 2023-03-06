@@ -7,6 +7,6 @@ $db_password = "";
 $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
 if ($conn->connect_error) {
-    header("Location: index.php");
+    die("Connection failed: " . $conn->connect_error);
 }
 //echo "Connected successfully";

@@ -1059,14 +1059,9 @@ ul {
 }
 
 .admin_add_button{
-    border-radius: 50% !important;
-    width: 8rem;
-    height: 8rem;
-    font-size: 4rem !important;
-    font-weight: 700;
-    background-color: #55b2da;
-    color: white;
-    border: none;
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
 }
 .close_button{
     font-size: 2rem;
