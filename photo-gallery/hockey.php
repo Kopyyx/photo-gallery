@@ -22,7 +22,6 @@ $button = "<img src='icons/add-button.svg' class='admin_add_button' data-bs-togg
     <div class="gallery_container">
         <ul class="image-gallery d-flex align-items-center flex-wrap">
             <?php
-            // Cyklus pro zobrazení jednotlivých fotografií
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                         if ($_SESSION["loggedIn"]){
@@ -39,7 +38,7 @@ $button = "<img src='icons/add-button.svg' class='admin_add_button' data-bs-togg
                     </form>
                     </li>";
                         }else{
-                            echo "<li class='list'><img class='image' src='photos/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/></li>";
+                            echo "<li class='list'><a href='uploads/" . $row['name'] . "'data-lightbox='hockey'><img class='image' src='uploads/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy' /></a></li>";
                         }
                 }
             }

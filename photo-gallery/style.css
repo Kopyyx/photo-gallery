@@ -79,21 +79,18 @@ footer{
     margin-top: .4rem;
 }
 
-.nav div.logo {
+.logo {
     float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3rem;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    margin-top: .8rem;
 }
 
 .nav div.logo a {
     text-decoration: none;
     color: #fff;
     font-size: 2.5rem;
-}
-
-.nav div.logo a:hover {
-    color: #000000;
 }
 
 .nav div.main_list {
@@ -879,6 +876,7 @@ h2 {
 
 ul {
     list-style: none;
+    padding-left: 0 !important;
 }
 
 .image-gallery {

@@ -38,24 +38,27 @@ function data_decrypt($data)
     return $output;
 
 }
-$database_password = mysqli_query($conn, "SELECT password, username FROM admin_login");
+$database_password = mysqli_query($conn, "SELECT password FROM admin_login");
 $result = mysqli_fetch_array($database_password);
 $user_password = $result ["password"];
-$user_username = $result ["username"];
 $decryptedPassword = data_decrypt($user_password);
 
 $new_password = $_POST["new_password"];
 $old_password = $_POST["old_password"];
-$comfirm = $_POST["comfirm"];
+$confirm = $_POST["confirm"];
 
-
-if ($old_password == $decryptedPassword && $new_password == $comfirm) {
-    if ($old_password == $new_password) {
-        echo "Nově zadané heslo se shoduje se startýn heslem";
+if ($old_password == $decryptedPassword){
+    if ($decryptedPassword == $new_password && $decryptedPassword == $confirm){
+        echo "Nové heslo nemůže být stejné jako staré heslo";
     }
-    $new = data_encrypt($new_password);
-    $sql = $conn->query("update admin_login set password='" . $new . "' where id=1");
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-}else{
-    echo "chyba";
+    elseif($new_password == $confirm){
+        $new = data_encrypt($new_password);
+        $sql = $conn->query("update admin_login set password='" . $new . "' where id=1");
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }else{
+        echo "Nová hesla se neshodují";
+    }
+}
+else{
+    echo "Špatně zadané současné heslo";
 }

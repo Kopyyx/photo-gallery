@@ -10,6 +10,8 @@ $logout = ($_SERVER["REQUEST_URI"] == "/index.php") ? 'window.location = \'photo
 
 $change = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/change.php" : "change.php";
 
+$logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo.png" : "icons/logo.png";
+
 session_start();
 
 if (!isset($_SESSION["loggedIn"])) {
@@ -21,9 +23,9 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
 
 <nav class="nav">
     <div class="container-fluid">
-        <div class="logo">
-            <a href="../../index.php">Logo</a>
-        </div>
+            <a href="../../index.php">
+                <img class="logo" src=<?php echo $logo;?> alt="logo">
+            </a>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a id="link-home" data-page="index.php">Domů</a></li>
@@ -138,7 +140,7 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
                     <div class="password_change_text">Nové heslo</div>
                     <input class="password_change" type="password" maxlength="20" name="new_password"><!--<img src="../icons/eye-close.png" alt="eye-closed">-->
                     <div class="password_change_text">Potvrzení nového hesla</div>
-                    <input class="password_change" type="password" maxlength="20" name="comfirm"><!--<img src="../icons/eye-close.png" alt="eye-closed">-->
+                    <input class="password_change" type="password" maxlength="20" name="confirm"><!--<img src="../icons/eye-close.png" alt="eye-closed">-->
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="submit" class="btn btn-success btn-lg">Uložit</button>
@@ -147,7 +149,6 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
         </div>
     </div>
 </div>
-
 
 <script>
     const linkHome = document.getElementById("link-home");

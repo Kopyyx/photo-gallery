@@ -54,10 +54,8 @@ function myMail()
        window.onload = function () { alert("Zpráva byla úspěšně odeslána!"); 
            window.location.href = "http://localhost:8000/photo-gallery/about.php";} </script>';
 
-    } catch (Exception $e) {
-        echo '<script type="text/javascript">
-            window.onload = function () { alert("Chyba! Email se nemohl odeslat");}</script>';
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    } catch (Exception $e) {;
+        echo "Email se nemohl odeslat. Chyba: {$mail->ErrorInfo}";
 
     }
     //return file_put_contents("mail.html", $recipient . "<br><br>" . $text);

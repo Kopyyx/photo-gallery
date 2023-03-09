@@ -39,7 +39,7 @@ $button = "<img src='icons/add-button.svg' class='admin_add_button' data-bs-togg
                     </form>
                     </li>";
                         }else{
-                            echo "<li class='list'><img class='image' src='photos/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/></li>";
+                            echo "<li class='list'><a href='uploads/" . $row['name'] . "'data-lightbox='couple'><img class='image' src='uploads/" . $row['name'] . "' alt='" . $row['name'] . "' loading='lazy'/></a></li>";
                         }
                     }
                 }

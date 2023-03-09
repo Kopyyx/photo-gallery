@@ -1,28 +1,8 @@
 <?php
 require "dbConfig.php";
-
-ob_start();
 session_start();
+$url = $_SERVER["HTTP_REFERER"];
 $_SESSION["loggedIn"] = false;
-
-function data_encrypt($data)
-{
-    $output = false;
-
-    $encrypt_method = "AES-256-CBC";
-    $secret_key = "E2A94EAA4B249C57D95AC84BF5897";
-    $secret_iv = 'RgUkXp2s5u8x/A?D(G+KbPeShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-J';
-
-    // hash
-    $key = hash('sha256', $secret_key);
-
-    $iv = substr(hash('sha256', $secret_iv), 0, 16);
-
-    $output = openssl_encrypt($data, $encrypt_method, $key, 0, $iv);
-    $output = base64_encode($output);
-
-    return $output;
-}
 
 function data_decrypt($data)
 {
@@ -44,9 +24,9 @@ function data_decrypt($data)
 
 }
 
-function redirect($url, $statusCode = 303)
+function redirect($url)
 {
-    header('Location: ' . $url, true, $statusCode);
+    header('Location: ' . $url);
     die();
 }
 
@@ -60,18 +40,6 @@ if ($_POST["username"] == $user_username && $_POST["password"] == $decryptedPass
     $_SESSION["loggedIn"] = true;
     redirect("/index.php");
 } else {
-    echo "<script>alert('Chyba :((')</script>";
+    echo "<script>alert('Špatné uživatelské jméno, nebo heslo')</script>";
+    echo "<script>window.location.replace('$url');</script>";
 }
-
-
-
-// insert into
-/*
-$encryptedPassword = data_encrypt($password);
-$sql = "INSERT INTO admin_login (id, username, password)
-VALUES ('NULL', '$username', '$encryptedPassword')";
-
-$conn->exec($sql);
-echo "New record created successfully";
-
-$conn = null;*/
