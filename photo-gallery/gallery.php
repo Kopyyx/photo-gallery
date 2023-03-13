@@ -35,11 +35,11 @@
                     <h4 class="overlay2">Hokej</h4>
                 </div>
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
-                    <a href="couple.php"><img class="gallery_photo" src="photos/couple3.jpg"></a>
+                    <a href="couple.php"><img class="gallery_photo" src="photos/couple4.jpg"></a>
                     <h4 class="overlay2">Párové fotografie</h4>
                 </div>
                 <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
-                    <a href="group.php"><img class="gallery_photo" src="photos/group2.jpg"></a>
+                    <a href="group.php"><img class="gallery_photo" src="photos/group4.jpg"></a>
                     <h4 class="overlay2">Skupinové fotografie</h4>
                 </div>
             </div>

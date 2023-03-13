@@ -26,7 +26,9 @@ function data_decrypt($data)
 
 function redirect($url)
 {
-    header('Location: ' . $url);
+    echo "<script>alert('Přihlášeno');</script>";
+
+    echo "<script>window.location.replace('$url');</script>";
     die();
 }
 

@@ -1,5 +1,8 @@
 <?php
 require_once "dbConfig.php";
+
+$url = $_SERVER["HTTP_REFERER"];
+
 function data_encrypt($data)
 {
     $output = false;
@@ -27,10 +30,8 @@ function data_decrypt($data)
     $secret_key = "E2A94EAA4B249C57D95AC84BF5897";
     $secret_iv = 'RgUkXp2s5u8x/A?D(G+KbPeShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-J';
 
-    // hash
     $key = hash('sha256', $secret_key);
 
-    // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
     $iv = substr(hash('sha256', $secret_iv), 0, 16);
 
     $output = openssl_decrypt(base64_decode($data), $encrypt_method, $key, 0, $iv);
@@ -49,16 +50,19 @@ $confirm = $_POST["confirm"];
 
 if ($old_password == $decryptedPassword){
     if ($decryptedPassword == $new_password && $decryptedPassword == $confirm){
-        echo "Nové heslo nemůže být stejné jako staré heslo";
+        echo "<script>alert('Nové heslo nemůže být stejné jako staré heslo');</script>";
+        echo "<script>window.location.replace('$url');</script>";
     }
     elseif($new_password == $confirm){
         $new = data_encrypt($new_password);
         $sql = $conn->query("update admin_login set password='" . $new . "' where id=1");
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }else{
-        echo "Nová hesla se neshodují";
+        echo "<script>alert('Nová hesla se neshodují');</script>";
+        echo "<script>window.location.replace('$url');</script>";
     }
 }
 else{
-    echo "Špatně zadané současné heslo";
+    echo "<script>alert('Špatně zadané současné heslo');</script>";
+    echo "<script>window.location.replace('$url');</script>";
 }

@@ -627,7 +627,8 @@ h2 {
 
 .gallery_photo {
     width: 90%;
-    border: solid .4rem antiquewhite;
+    border: solid .4rem white;
+    border-radius: .5rem;
     /*transition: transform .5s;*/
 }
 .admin_category{
@@ -667,9 +668,9 @@ h2 {
 }
 
 .text_about{
+    width: 55rem;
     color: white;
     font-size: 2.5rem;
-    word-wrap: break-word;
     display: flex;
     justify-content: center;
     flex-direction: column;

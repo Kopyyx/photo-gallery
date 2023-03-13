@@ -5,7 +5,9 @@ $_SESSION["loggedIn"] = false;
 
 function redirect($url)
 {
-    header('Location: ' . $url);
+    echo "<script>alert('Odhlášeno');</script>";
+
+    echo "<script>window.location.replace('$url');</script>";
     die();
 }
 redirect("/index.php");
