@@ -2,7 +2,7 @@
     require_once('components/nav.php'); ?>
     <section class="home">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
+                <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
@@ -13,39 +13,45 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="photos/group4.jpg" class="d-block w-100">
+                    <img src="photos/couple1.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
                     <img src="photos/hockey4.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="photos/couple1.jpg" class="d-block w-100">
+                    <img src="photos/group4.jpg" class="d-block w-100">
                 </div>
-            </div>
-        </div>
-        <div class="container d-flex justify-content-center">
-            <div class="row d-flex justify-content-center">
-                <div class="overlay_gallery_heading py-4">
-                    <h3 class="page_title">GALERIE</h3>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center overlay_gallery">
-                <div class="col-8 col-sm-10 col-md-4 text-center py-4">
-                    <a href="hockey.php"><img class="gallery_photo" src="photos/hockey3.jpg"></a>
-                    <h4 class="overlay2">Hokej</h4>
-                </div>
-                <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
-                    <a href="couple.php"><img class="gallery_photo" src="photos/couple4.jpg"></a>
-                    <h4 class="overlay2">Párové fotografie</h4>
-                </div>
-                <div class="col-8 col-sm-10 col-md-4 text-center py-4"><!--<h2 class="overlay2">Hokej</h2>-->
-                    <a href="group.php"><img class="gallery_photo" src="photos/group4.jpg"></a>
-                    <h4 class="overlay2">Skupinové fotografie</h4>
-                </div>
-            </div>
+                <div class="container d-flex justify-content-center align-items-center" style="
+                     height: 95vh">
+                    <div class="row d-flex justify-content-center">
+                        <div class="overlay_gallery_heading py-4">
 
+                            <h3 class="page_title cs" lang="cs" >GALERIE</h3>
+                            <h3 class="page_title en" lang="en">GALLERY</h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center overlay_gallery">
+                        <div class="col-8 col-sm-10 col-md-4 text-center py-2">
+                            <a href="hockey.php"><img class="gallery_photo" src="photos/hockey3.jpg"></a>
+                            <h4 id="test" class="overlay2 cs" lang="cs">Hokej</h4>
+                            <h4 id="test" class="overlay2 en" lang="en">Hockey</h4>
+                        </div>
+                        <div class="col-8 col-sm-10 col-md-4 text-center py-2"><!--<h2 class="overlay2">Hokej</h2>-->
+                            <a href="couple.php"><img class="gallery_photo" src="photos/couple4.jpg"></a>
+                            <h4 class="overlay2 cs" lang="cs"">Párové fotografie</h4>
+                            <h4 class="overlay2 en" lang="en"">Couple photos</h4>
+                        </div>
+                        <div class="col-8 col-sm-10 col-md-4 text-center py-2"><!--<h2 class="overlay2">Hokej</h2>-->
+                            <a href="group.php"><img class="gallery_photo" src="photos/group4.jpg"></a>
+                            <h4 class="overlay2 cs" lang="cs"">Skupinové fotografie</h4>
+                            <h4 class="overlay2 en" lang="en"">Group Photos</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
 
 <?php require_once('components/footer.php'); ?>
+

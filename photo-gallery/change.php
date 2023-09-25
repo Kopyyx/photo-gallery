@@ -56,7 +56,8 @@ if ($old_password == $decryptedPassword){
     elseif($new_password == $confirm){
         $new = data_encrypt($new_password);
         $sql = $conn->query("update admin_login set password='" . $new . "' where id=1");
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        echo "<script>alert('Heslo je úspěšně změněno');</script>";
+        echo "<script>window.location.replace('$url');</script>";
     }else{
         echo "<script>alert('Nová hesla se neshodují');</script>";
         echo "<script>window.location.replace('$url');</script>";

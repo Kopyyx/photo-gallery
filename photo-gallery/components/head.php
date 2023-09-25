@@ -3,7 +3,7 @@ $path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/style.css" : 
 $logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo.png" : "icons/logo.png";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
