@@ -14,9 +14,15 @@ $facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery
     </div>
     <div class="footer_author">&#169; Kopecký 2022/23</div>
 </footer>
-
-<script src="<?php echo $path ?>"></script>
+<div class="loader-container">
+    <div class="lds-ring d-flex justify-content-center align-items-center w-100 h-100"><div></div><div></div><div></div><div></div></div>
+</div>
 
 </body>
-
+<script src="<?php echo $path ?>"></script>
+<script>
+    $(window).on("load", function () {
+        $(".loader-container").fadeOut(500);
+    });
+</script>
 </html>

@@ -13,7 +13,6 @@ $change = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/change.php"
 $logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo.png" : "icons/logo.png";
 
 session_start();
-
 if (!isset($_SESSION["loggedIn"])) {
     $_SESSION["loggedIn"] = false;
 }
@@ -31,8 +30,7 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
                 <li><a id="link-home" data-page="index.php">Domů</a></li>
                 <li><a id="link-gallery" data-page="photo-gallery/gallery.php">Galerie</a></li>
                 <li><a id="link-about" data-page="photo-gallery/about.php">O mně</a></li>
-                <li id="en"><a href="#"  onclick="changeLang('en')">En</a></li>
-                <li id="cs"><a href="#"  onclick="changeLang('cs')">Cs</a></li>
+                <li><a href="#" id="lang"  onclick="changeLang()">Cs</a></li>
                 <?php if ($_SESSION["loggedIn"]){echo $password_change;} ?>
                 <div class="social-icons-nav">
                     <li><a href="https://www.instagram.com/mh.shutterbug/?theme=dark" target="_blank">

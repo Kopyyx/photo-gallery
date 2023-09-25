@@ -14,38 +14,35 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Maintain a supported Language List
-var langList = ['en', 'cs'];
-// Get browser Language
-var userLang = navigator.language || navigator.userLanguage;
-// extract Language (en-US => en)
-userLang = userLang.substring(0, 2);
-// Call the function to set language
-changeLang(userLang);
+const setLocalStorage = () => {
+    if (Object.is(localStorage.getItem("lang"),null)){
+        localStorage.setItem("lang", "cs");
+    }
+    if (localStorage.getItem("lang") === "cs"){
+        hideLang("en")
+        document.getElementById("lang").innerText = "en";
+    }
+    else {
+        hideLang("cs")
+        document.getElementById("lang").innerText = "cs";
+    }
+}
+setLocalStorage();
 
-// function to change language
-function changeLang(lang) {
-    langList.forEach((langEle) => {
-        // if language matches, display
-        if (langEle == lang) {
-            var langElems = document.querySelectorAll('.' + langEle)
-            langElems.forEach((elem) => {
-                elem.style.display = "block"
-                var link = document.getElementById('cs');
-                link.style.display = 'none';
-                var link = document.getElementById('en');
-                link.style.display = 'block';
-            })
-        }
-        // hide the language text
-        else {
-            hideLang(langEle)
-            var link = document.getElementById('en');
-            link.style.display = 'none';
-            var link = document.getElementById('cs');
-            link.style.display = 'block';
-
-        }
+const changeLang = () => {
+    if(localStorage.getItem("lang")=== "cs") {
+        hideLang("cs")
+        localStorage.setItem("lang", "en");
+        document.getElementById("lang").innerText = "cs";
+    }
+    else {
+        hideLang("en");
+        localStorage.setItem("lang", "cs");
+        document.getElementById("lang").innerText = "en";
+    }
+    let langElems = document.querySelectorAll("." + localStorage.getItem("lang"));
+    langElems.forEach((element) => {
+        element.style.display = "block";
     })
 }
 
@@ -56,3 +53,4 @@ function hideLang(lang) {
         elem.style.display = "none"
     })
 }
+
