@@ -1,14 +1,15 @@
 <?php
+
 require_once 'dbConfig.php';
 $uploadPath = "uploads/";
 $statusMsg = '';
-$tb = "";
 $url = $_SERVER["HTTP_REFERER"];
 
-function compressImage($source, $destination, $quality) {
+function compressImage($source, $destination, $quality)
+{
     $imgInfo = getimagesize($source);
     $mime = $imgInfo['mime'];
-    switch($mime){
+    switch ($mime) {
         case 'image/jpeg':
             $image = imagecreatefromjpeg($source);
             break;
@@ -27,7 +28,7 @@ function compressImage($source, $destination, $quality) {
     return $destination;
 }
 
-if(isset($_POST["submit"])) {
+if (isset($_POST["submit"])) {
     if (!empty($_FILES["image"]["name"])) {
 
         $fileName = basename($_FILES["image"]["name"]);
@@ -45,21 +46,20 @@ if(isset($_POST["submit"])) {
         }
     }
 }
-if(isset($_POST["submit"])) {
 
+if (str_contains($_SERVER['HTTP_REFERER'], "/index.php"))
+    $tb = "photo_bg_index";
+else
+    $tb = "photo_bg_gallery";
+
+$selectOption = $_POST['option'];
+$name = $_FILES["image"]["name"];
+
+if (isset($_POST["submit"])) {
     if (!empty($_FILES["image"]["name"])) {
-
-        $fileName = basename($_FILES["image"]["name"]);
-
-        if (str_contains($url, "hockey")) {
-            $tb = "hockey_photos";
-        } elseif (str_contains($url, "couple")) {
-            $tb = "couple_photos";
-        } elseif (str_contains($url, "group")) {
-            $tb = "group_photos";
-        }
-        $stmt = $conn->prepare("INSERT INTO $tb (name) VALUES (?)");
-        $stmt->bind_param("s", $fileName);
+        $sql = "UPDATE $tb SET name='$name' WHERE id = '$selectOption'";
+        $stmt = $conn->prepare($sql);
+        //$stmt->bind_param('s', $fileName);
         if ($stmt->execute()) {
             $statusMsg = "Nahrání proběhlo úspěšně.";
         } else {

@@ -1,5 +1,8 @@
 <?php require_once('photo-gallery/components/head.php');
-require_once('photo-gallery/components/nav.php'); ?>
+require_once('photo-gallery/components/nav.php');
+require_once('photo-gallery/dbConfig.php');
+
+?>
     <section class="home">
         <div class="overlay_home" id="introduction"><h1 class="cs" lang="cs">FOTOGALERIE</h1>
             <h1 class="en" lang="en">PHOTO GALLERY</h1>
@@ -15,15 +18,25 @@ require_once('photo-gallery/components/nav.php'); ?>
                         class=""></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="photo-gallery/photos/hockey2.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="photo-gallery/photos/couple4.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="photo-gallery/photos/group4.jpg" class="d-block w-100">
-                </div>
+                <?php $sql = "SELECT * FROM photo_bg_index ORDER BY id ASC";
+                    $result = mysqli_query($conn, $sql);
+
+                    $isFirst = true;
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $photo = $row['name'];
+                            if ($isFirst){
+                                $isFirst = false;
+                                echo "<div class='carousel-item active'>
+                                <img src='photo-gallery/photos/".$photo."' class='d-block w-100'> </div> ";
+                            }
+                            else{
+                                echo "<div class='carousel-item'>
+                                <img src='photo-gallery/photos/".$photo."' class='d-block w-100'> </div> ";
+                            }
+                        }
+                    }
+                        ?>
             </div>
         </div>
     </section>

@@ -15,7 +15,8 @@ $button = "<img src='icons/add-button.svg' class='admin_add_button' data-bs-togg
 ?>
 
     <section class="opening-bg-couple">
-        <h4 class="gallery_title text-center">Párové fotografie</h4>
+        <h4 class="gallery_title text-center cs" lang="cs">Párové fotografie</h4>
+        <h4 class="gallery_title text-center en" lang="en">Couple photos</h4>
     </section>
 
     <section class="gallery">

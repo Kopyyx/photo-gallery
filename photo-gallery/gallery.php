@@ -1,5 +1,6 @@
 <?php require_once("components/head.php");
-    require_once('components/nav.php'); ?>
+    require_once('components/nav.php');
+require_once('dbConfig.php') ?>
     <section class="home">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-indicators">
@@ -12,15 +13,24 @@
                         class=""></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="photos/couple1.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="photos/hockey4.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="photos/group4.jpg" class="d-block w-100">
-                </div>
+                <?php $sql = "SELECT * FROM photo_bg_gallery ORDER BY id ASC";
+                $result = mysqli_query($conn, $sql);
+                $isFirst = true;
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $photo = $row['name'];
+                        if ($isFirst){
+                            $isFirst = false;
+                            echo "<div class='carousel-item active'>
+                                <img src='photos/".$photo."' class='d-block w-100'> </div> ";
+                        }
+                        else{
+                            echo "<div class='carousel-item'>
+                                <img src='photos/".$photo."' class='d-block w-100'> </div> ";
+                        }
+                    }
+                }
+                ?>
                 <div class="container d-flex justify-content-center align-items-center" style="
                      height: 95vh">
                     <div class="row d-flex justify-content-center">
