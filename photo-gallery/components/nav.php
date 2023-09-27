@@ -1,4 +1,5 @@
 <?php
+
 $instagram_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/instagram-white.svg" : "icons/instagram-white.svg";
 $facebook_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/facebook-white.svg" : "icons/facebook-white.svg";
 $user_icon_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/user-icon.svg" : "icons/user-icon.svg";
@@ -8,24 +9,25 @@ $logout_path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/
 
 $logout = ($_SERVER["REQUEST_URI"] == "/index.php") ? 'window.location = \'photo-gallery/logout.php\';' : 'window.location = \'logout.php\';';
 
-$change = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/change.php" : "change.php";
-
 $url = ($_SERVER['REQUEST_URI'] == "/index.php") ? "/index.php" : "photo-gallery/gallery.php";
-$url_0 = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/" : "";
-
+$url_modals = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/modals.php" : "modals.php";
 
 $logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo.png" : "icons/logo.png";
 
 $edit_bg_button = ($_SERVER['REQUEST_URI'] == "/index.php") ? "<li><img src='photo-gallery/icons/pen.svg' class='social-icons-nav' data-toggle='modal' data-target='#edit_bg_modal'></li>" : "<li><img src='icons/pen.svg' class='social-icons-nav' data-toggle='modal' data-target='#edit_bg_modal'></li>";
-$edit_text_button = "<li><img src='icons/pen.svg' class='social-icons-nav' data-toggle='modal' data-target='#edit_modal'></li>";
+$edit_text_button_cs = "<li><img src='icons/cz.svg' class='social-icons-nav' data-toggle='modal' data-target='#edit_text_modal_cs'></li>";
+$edit_text_button_en = "<li><img src='icons/eng.svg' class='social-icons-nav' data-toggle='modal' data-target='#edit_text_modal_en'></li>";
 
 session_start();
 if (!isset($_SESSION["loggedIn"])) {
     $_SESSION["loggedIn"] = false;
 }
+
+ if ($_SESSION["loggedIn"]) {
+     require_once  $url_modals;
+ }
 $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_password'>Změna hesla</a></li>";
 ?>
-
 
 <nav class="nav">
     <div class="container-fluid">
@@ -44,9 +46,14 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
                 <?php if ($_SESSION["loggedIn"]) {
                     echo $password_change;
                 } ?>
-                <div class="social-icons-nav d-flex">
+                <div class="social-icons-nav d-flex justify-content-end">
                     <?php if ($_SESSION["loggedIn"] && str_contains($_SERVER["REQUEST_URI"], "$url" ))
                         echo $edit_bg_button;
+
+                        if ($_SESSION["loggedIn"] && str_contains($_SERVER["REQUEST_URI"], "/about.php" )){
+                            echo $edit_text_button_cs;
+                            echo $edit_text_button_en;
+                        }
                      ?>
                     <li><a href="https://www.instagram.com/mh.shutterbug/?theme=dark" target="_blank">
                             <img src="<?php echo $instagram_icon_path ?>" alt="instagram-white-logo"/>
@@ -109,15 +116,6 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
         </div>
     </div>
 </div>
-<?php
-if ($_SESSION["loggedIn"] && str_contains($_SERVER["REQUEST_URI"], "$url_0"))
-    require_once "modals.php";
-else
-    require_once "photo-gallery/modals.php";
-?>
-
-
-
 
 <script>
     const linkHome = document.getElementsByClassName("link-home");
@@ -125,7 +123,6 @@ else
     const linkAbout = document.getElementsByClassName("link-about");
 
     for (let i = 0; i <= 1; i++) {
-
         linkHome[i].addEventListener("click", redirect);
         linkGallery[i].addEventListener("click", redirect);
         linkAbout[i].addEventListener("click", redirect);

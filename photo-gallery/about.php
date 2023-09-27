@@ -1,32 +1,33 @@
-<?php require_once('components/head.php'); ?>
-<?php require_once('components/nav.php');
+<?php require_once('components/head.php');
+require_once('components/nav.php');
+require_once('dbConfig.php');
 
 if (!isset($_SESSION["loggedIn"])) {
     $_SESSION["loggedIn"] = false;
 }
+
+$sql_cs = "SELECT text FROM text_about WHERE id=1";
+$result_cs = mysqli_query($conn, $sql_cs);
+$text_array_cs = mysqli_fetch_assoc($result_cs);
+$text_cs = implode($text_array_cs);
+$text_cs_final = nl2br($text_cs);
+
+$sql_en = "SELECT text FROM text_about WHERE id=2";
+$result_en = mysqli_query($conn, $sql_en);
+$text_array_en = mysqli_fetch_assoc($result_en);
+$text_en = implode($text_array_en);
+$text_en_final = nl2br($text_en);
 ?>
 
 <section class="home">
     <div class="overlay_about d-flex flex-column align-items-center">
         <h3 class="page_title cs" lang="cs">O MNĚ</h3>
         <h3 class="page_title en" lang="en">ABOUT ME</h3>
-        <div class='text_about cs' lang="cs>
-            <p class="py-4">
-                Říkají mi Mika, je mi 19 let a vedle tance a cestování je mou velkou vášní právě focení.
-            </p>
-            <br>
-            <p>
-                Pokud máte zájem o moje fotografické služby, neváhejte mě kontaktovat. Ráda vám vaše momenty pomůžu zachytit.
-            </p>
+        <div class='text_about cs' lang="cs">
+            <?php echo($text_cs_final); ?>
         </div>
         <div class='text_about en' lang='en'>
-            <p class='py-4'>
-                They call me Mika, I'm 19 years old, and besides dancing and traveling, my big passion is photography.
-            </p>
-            <br>
-            <p>
-                If you are interested in my photography services, please do not hesitate to contact me. I will be happy to help you capture your moments.
-            </p>
+            <?php echo($text_en_final); ?>
         </div>
 
 

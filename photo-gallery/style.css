@@ -1361,3 +1361,10 @@ ul {
         width: 80%;
     }
 }
+.edit_text{
+    height: 40rem;
+    width: 45rem;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1.5rem;
+}
