@@ -1,6 +1,6 @@
 <?php
 $path = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/style.css" : "style.css";
-$logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo.png" : "icons/logo.png";
+$logo = ($_SERVER['REQUEST_URI'] == "/index.php") ? "photo-gallery/icons/logo_bg.png" : "icons/logo_bg.png";
 ?>
 <!DOCTYPE html>
 <html lang="cs">

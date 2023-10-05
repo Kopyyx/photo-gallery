@@ -35,7 +35,7 @@ $password_change = "<li><a data-bs-toggle='modal' data-bs-target='#change_passwo
             <img class="logo" src=<?php echo $logo; ?> alt="logo">
         </a>
         <div id="mainListDiv" class="main_list">
-            <ul class="navlinks">
+            <ul class="navlinks" id="primary">
                 <li class="cs"><a class="link-home" data-page="index.php" lang="cs">Domů</a></li>
                 <li class="en"><a class="link-home" data-page="index.php" lang="en">Home</a></li>
                 <li class="cs"><a class="link-gallery" data-page="photo-gallery/gallery.php" lang="cs">Galerie</a></li>
